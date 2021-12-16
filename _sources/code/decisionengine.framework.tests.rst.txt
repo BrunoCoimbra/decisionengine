@@ -22,6 +22,33 @@ decisionengine.framework.tests.BATransform module
    :show-inheritance:
    :private-members:
 
+decisionengine.framework.tests.DynamicPublisher module
+------------------------------------------------------
+
+.. automodule:: decisionengine.framework.tests.DynamicPublisher
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :private-members:
+
+decisionengine.framework.tests.DynamicSource module
+---------------------------------------------------
+
+.. automodule:: decisionengine.framework.tests.DynamicSource
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :private-members:
+
+decisionengine.framework.tests.DynamicTransform module
+------------------------------------------------------
+
+.. automodule:: decisionengine.framework.tests.DynamicTransform
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :private-members:
+
 decisionengine.framework.tests.ErrorOnAcquire module
 ----------------------------------------------------
 
@@ -44,15 +71,6 @@ decisionengine.framework.tests.FailingSourceNOP module
 ------------------------------------------------------
 
 .. automodule:: decisionengine.framework.tests.FailingSourceNOP
-   :members:
-   :undoc-members:
-   :show-inheritance:
-   :private-members:
-
-decisionengine.framework.tests.FailingSourceProxy module
---------------------------------------------------------
-
-.. automodule:: decisionengine.framework.tests.FailingSourceProxy
    :members:
    :undoc-members:
    :show-inheritance:
@@ -139,10 +157,10 @@ decisionengine.framework.tests.TransformWithMissingProducesConsumes module
    :show-inheritance:
    :private-members:
 
-decisionengine.framework.tests.WorkingSourceProxy module
---------------------------------------------------------
+decisionengine.framework.tests.WriteToDisk module
+-------------------------------------------------
 
-.. automodule:: decisionengine.framework.tests.WorkingSourceProxy
+.. automodule:: decisionengine.framework.tests.WriteToDisk
    :members:
    :undoc-members:
    :show-inheritance:
@@ -184,6 +202,24 @@ decisionengine.framework.tests.test\_defaults module
    :show-inheritance:
    :private-members:
 
+decisionengine.framework.tests.test\_dynamic\_test\_modules module
+------------------------------------------------------------------
+
+.. automodule:: decisionengine.framework.tests.test_dynamic_test_modules
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :private-members:
+
+decisionengine.framework.tests.test\_empty\_config module
+---------------------------------------------------------
+
+.. automodule:: decisionengine.framework.tests.test_empty_config
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :private-members:
+
 decisionengine.framework.tests.test\_error\_on\_acquire module
 --------------------------------------------------------------
 
@@ -220,15 +256,6 @@ decisionengine.framework.tests.test\_reaper module
    :show-inheritance:
    :private-members:
 
-decisionengine.framework.tests.test\_restart\_channel module
-------------------------------------------------------------
-
-.. automodule:: decisionengine.framework.tests.test_restart_channel
-   :members:
-   :undoc-members:
-   :show-inheritance:
-   :private-members:
-
 decisionengine.framework.tests.test\_sample\_config module
 ----------------------------------------------------------
 
@@ -247,19 +274,19 @@ decisionengine.framework.tests.test\_source\_proxy module
    :show-inheritance:
    :private-members:
 
-decisionengine.framework.tests.test\_start\_with\_bad\_channels module
-----------------------------------------------------------------------
+decisionengine.framework.tests.test\_source\_proxy\_3G module
+-------------------------------------------------------------
 
-.. automodule:: decisionengine.framework.tests.test_start_with_bad_channels
+.. automodule:: decisionengine.framework.tests.test_source_proxy_3G
    :members:
    :undoc-members:
    :show-inheritance:
    :private-members:
 
-decisionengine.framework.tests.test\_start\_with\_no\_channels module
----------------------------------------------------------------------
+decisionengine.framework.tests.test\_start\_with\_bad\_channels module
+----------------------------------------------------------------------
 
-.. automodule:: decisionengine.framework.tests.test_start_with_no_channels
+.. automodule:: decisionengine.framework.tests.test_start_with_bad_channels
    :members:
    :undoc-members:
    :show-inheritance:

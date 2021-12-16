@@ -13,19 +13,19 @@ decisionengine.framework.config.tests.test\_config module
    :show-inheritance:
    :private-members:
 
-decisionengine.framework.config.tests.test\_policies module
------------------------------------------------------------
+decisionengine.framework.config.tests.test\_de\_std module
+----------------------------------------------------------
 
-.. automodule:: decisionengine.framework.config.tests.test_policies
+.. automodule:: decisionengine.framework.config.tests.test_de_std
    :members:
    :undoc-members:
    :show-inheritance:
    :private-members:
 
-decisionengine.framework.config.tests.test\_validconfig module
---------------------------------------------------------------
+decisionengine.framework.config.tests.test\_policies module
+-----------------------------------------------------------
 
-.. automodule:: decisionengine.framework.config.tests.test_validconfig
+.. automodule:: decisionengine.framework.config.tests.test_policies
    :members:
    :undoc-members:
    :show-inheritance:

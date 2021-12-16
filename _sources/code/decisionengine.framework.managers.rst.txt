@@ -1,0 +1,23 @@
+decisionengine.framework.managers package
+=========================================
+
+Submodules
+----------
+
+decisionengine.framework.managers.ComponentManager module
+---------------------------------------------------------
+
+.. automodule:: decisionengine.framework.managers.ComponentManager
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :private-members:
+
+Module contents
+---------------
+
+.. automodule:: decisionengine.framework.managers
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :private-members:

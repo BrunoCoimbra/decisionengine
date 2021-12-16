@@ -1,3 +1,6 @@
+.. SPDX-FileCopyrightText: 2017 Fermi Research Alliance, LLC
+.. SPDX-License-Identifier: Apache-2.0
+
 Welcome to decisionengine's documentation!
 ==========================================
 
@@ -12,15 +15,29 @@ Release Notes
    :maxdepth: 1
 
    release_notes
-   Latest<release_notes/release_notes_1.6>
+   Latest<release_notes/release_notes_1.7>
 
-Developer Documentation
+
+Install Decision Engine
 =======================
+
+Here are instructions for operators and developers to install the
+Decision Engine using the distributed RPM packages.
 
 .. toctree::
    :maxdepth: 1
 
-   unittest.rst
+   install
+
+
+Developer Documentation
+=======================
+
+The developer documentation is in the `GitHub Wiki <https://github.com/HEPCloud/decisionengine/wiki/Development-Workflow>`_
+
+Intructions to build the package, or to run unit tests and other CI tests, and to install decisionengine
+are in the `GitHub Wiki <https://github.com/HEPCloud/decisionengine/wiki/How-to-Run-Decision-Engine>`_ as well.
+
 
 Jenkins CI pipeline
 ===================
@@ -32,6 +49,7 @@ Jenkins CI pipeline
 
 Source code
 ===========
+
 .. toctree::
    :maxdepth: 1
 

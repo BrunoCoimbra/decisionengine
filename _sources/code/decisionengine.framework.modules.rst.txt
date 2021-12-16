@@ -12,10 +12,10 @@ Subpackages
 Submodules
 ----------
 
-decisionengine.framework.modules.LogicEngine module
+decisionengine.framework.modules.EmptySource module
 ---------------------------------------------------
 
-.. automodule:: decisionengine.framework.modules.LogicEngine
+.. automodule:: decisionengine.framework.modules.EmptySource
    :members:
    :undoc-members:
    :show-inheritance:
@@ -34,6 +34,15 @@ decisionengine.framework.modules.Publisher module
 -------------------------------------------------
 
 .. automodule:: decisionengine.framework.modules.Publisher
+   :members:
+   :undoc-members:
+   :show-inheritance:
+   :private-members:
+
+decisionengine.framework.modules.QueueLogger module
+---------------------------------------------------
+
+.. automodule:: decisionengine.framework.modules.QueueLogger
    :members:
    :undoc-members:
    :show-inheritance:
