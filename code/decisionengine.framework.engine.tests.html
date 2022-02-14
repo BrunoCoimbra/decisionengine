@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>decisionengine.framework.engine.tests package &mdash; decisionengine 0.3.12.dev614+gb203e2c4 documentation</title>
+  <title>decisionengine.framework.engine.tests package &mdash; decisionengine 0.3.12.dev651+gde7829a4 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -39,7 +39,8 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../release_notes.html">Release Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../release_notes/release_notes_1.7.html">Latest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../release_notes/release_notes_1.7.html">Release 1.7.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../release_notes/release_notes_1.7.html#release-1-7-0">Release 1.7.0</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../install.html">Installing and running HEPCloud’s Decision Engine</a></li>
@@ -126,11 +127,14 @@
 
 <dl class="py function">
 <dt class="sig sig-object py" id="decisionengine.framework.engine.tests.fixtures.PG_PROG">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.engine.tests.fixtures.</span></span><span class="sig-name descname"><span class="pre">PG_PROG</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">_pytest.fixtures.FixtureRequest</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmpdir_factory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">_pytest.tmpdir.TempdirFactory</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><span class="pre">pytest_postgresql.executor.PostgreSQLExecutor</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#decisionengine.framework.engine.tests.fixtures.PG_PROG" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.engine.tests.fixtures.</span></span><span class="sig-name descname"><span class="pre">PG_PROG</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">_pytest.fixtures.FixtureRequest</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmp_path_factory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">_pytest.tmpdir.TempPathFactory</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><span class="pre">pytest_postgresql.executor.PostgreSQLExecutor</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#decisionengine.framework.engine.tests.fixtures.PG_PROG" title="Permalink to this definition"></a></dt>
 <dd><p>Process fixture for PostgreSQL.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>request</strong> – fixture request object</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> – fixture request object</p></li>
+<li><p><strong>tmp_path_factory</strong> – temporary path object (fixture)</p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>tcp executor</p>
@@ -155,36 +159,42 @@ The SQLAlchemyDS will create the schema as needed.</p>
 </dd></dl>
 
 </section>
-<section id="module-decisionengine.framework.engine.tests.test_Workers">
-<span id="decisionengine-framework-engine-tests-test-workers-module"></span><h2>decisionengine.framework.engine.tests.test_Workers module<a class="headerlink" href="#module-decisionengine.framework.engine.tests.test_Workers" title="Permalink to this headline"></a></h2>
+<section id="module-decisionengine.framework.engine.tests.test_ChannelWorkers">
+<span id="decisionengine-framework-engine-tests-test-channelworkers-module"></span><h2>decisionengine.framework.engine.tests.test_ChannelWorkers module<a class="headerlink" href="#module-decisionengine.framework.engine.tests.test_ChannelWorkers" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="decisionengine.framework.engine.tests.test_ChannelWorkers.TaskManager">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">decisionengine.framework.engine.tests.test_ChannelWorkers.</span></span><span class="sig-name descname"><span class="pre">TaskManager</span></span><a class="reference internal" href="../_modules/decisionengine/framework/engine/tests/test_ChannelWorkers.html#TaskManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.engine.tests.test_ChannelWorkers.TaskManager" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="decisionengine.framework.engine.tests.test_ChannelWorkers.TaskManager.name">
+<span class="sig-name descname"><span class="pre">name</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">'test_channel'</span></em><a class="headerlink" href="#decisionengine.framework.engine.tests.test_ChannelWorkers.TaskManager.name" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="decisionengine.framework.engine.tests.test_ChannelWorkers.TaskManager.set_loglevel_value">
+<span class="sig-name descname"><span class="pre">set_loglevel_value</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/engine/tests/test_ChannelWorkers.html#TaskManager.set_loglevel_value"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.engine.tests.test_ChannelWorkers.TaskManager.set_loglevel_value" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
 <dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.engine.tests.test_Workers.get_channel_config">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.engine.tests.test_Workers.</span></span><span class="sig-name descname"><span class="pre">get_channel_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/engine/tests/test_Workers.html#get_channel_config"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.engine.tests.test_Workers.get_channel_config" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="decisionengine.framework.engine.tests.test_ChannelWorkers.global_config">
+<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.engine.tests.test_ChannelWorkers.</span></span><span class="sig-name descname"><span class="pre">global_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataspace</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/engine/tests/test_ChannelWorkers.html#global_config"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.engine.tests.test_ChannelWorkers.global_config" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.engine.tests.test_Workers.global_config">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.engine.tests.test_Workers.</span></span><span class="sig-name descname"><span class="pre">global_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">dataspace</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/engine/tests/test_Workers.html#global_config"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.engine.tests.test_Workers.global_config" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="decisionengine.framework.engine.tests.test_ChannelWorkers.test_worker_logger_sized_rotation">
+<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.engine.tests.test_ChannelWorkers.</span></span><span class="sig-name descname"><span class="pre">test_worker_logger_sized_rotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">global_config</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/engine/tests/test_ChannelWorkers.html#test_worker_logger_sized_rotation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.engine.tests.test_ChannelWorkers.test_worker_logger_sized_rotation" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.engine.tests.test_Workers.task_manager">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.engine.tests.test_Workers.</span></span><span class="sig-name descname"><span class="pre">task_manager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">global_config</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/engine/tests/test_Workers.html#task_manager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.engine.tests.test_Workers.task_manager" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="decisionengine.framework.engine.tests.test_ChannelWorkers.test_worker_logger_timed_rotation">
+<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.engine.tests.test_ChannelWorkers.</span></span><span class="sig-name descname"><span class="pre">test_worker_logger_timed_rotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">global_config</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/engine/tests/test_ChannelWorkers.html#test_worker_logger_timed_rotation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.engine.tests.test_ChannelWorkers.test_worker_logger_timed_rotation" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.engine.tests.test_Workers.test_worker_logger_sized_rotation">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.engine.tests.test_Workers.</span></span><span class="sig-name descname"><span class="pre">test_worker_logger_sized_rotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_manager</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_config</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/engine/tests/test_Workers.html#test_worker_logger_sized_rotation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.engine.tests.test_Workers.test_worker_logger_sized_rotation" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.engine.tests.test_Workers.test_worker_logger_timed_rotation">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.engine.tests.test_Workers.</span></span><span class="sig-name descname"><span class="pre">test_worker_logger_timed_rotation</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_manager</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_config</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/engine/tests/test_Workers.html#test_worker_logger_timed_rotation"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.engine.tests.test_Workers.test_worker_logger_timed_rotation" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.engine.tests.test_Workers.test_worker_name">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.engine.tests.test_Workers.</span></span><span class="sig-name descname"><span class="pre">test_worker_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">task_manager</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">global_config</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/engine/tests/test_Workers.html#test_worker_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.engine.tests.test_Workers.test_worker_name" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="decisionengine.framework.engine.tests.test_ChannelWorkers.test_worker_name">
+<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.engine.tests.test_ChannelWorkers.</span></span><span class="sig-name descname"><span class="pre">test_worker_name</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">global_config</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/engine/tests/test_ChannelWorkers.html#test_worker_name"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.engine.tests.test_ChannelWorkers.test_worker_name" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </section>
@@ -342,7 +352,7 @@ metric instantiation gives us multiprocess metrics</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2021, Fermilab.</p>
+    <p>&#169; Copyright 2022, Fermilab.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a

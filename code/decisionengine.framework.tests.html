@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>decisionengine.framework.tests package &mdash; decisionengine 0.3.12.dev614+gb203e2c4 documentation</title>
+  <title>decisionengine.framework.tests package &mdash; decisionengine 0.3.12.dev651+gde7829a4 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -39,7 +39,8 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../release_notes.html">Release Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../release_notes/release_notes_1.7.html">Latest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../release_notes/release_notes_1.7.html">Release 1.7.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../release_notes/release_notes_1.7.html#release-1-7-0">Release 1.7.0</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../install.html">Installing and running HEPCloud’s Decision Engine</a></li>
@@ -239,6 +240,30 @@
 <dt class="sig sig-object py" id="decisionengine.framework.tests.FailingSourceNOP.SourceWithMissingProduces">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.FailingSourceNOP.</span></span><span class="sig-name descname"><span class="pre">SourceWithMissingProduces</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">set_of_parameters</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/FailingSourceNOP.html#SourceWithMissingProduces"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.FailingSourceNOP.SourceWithMissingProduces" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <a class="reference internal" href="decisionengine.framework.modules.html#decisionengine.framework.modules.Source.Source" title="decisionengine.framework.modules.Source.Source"><code class="xref py py-class docutils literal notranslate"><span class="pre">decisionengine.framework.modules.Source.Source</span></code></a></p>
+</dd></dl>
+
+</section>
+<section id="module-decisionengine.framework.tests.IntSource">
+<span id="decisionengine-framework-tests-intsource-module"></span><h2>decisionengine.framework.tests.IntSource module<a class="headerlink" href="#module-decisionengine.framework.tests.IntSource" title="Permalink to this headline"></a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="decisionengine.framework.tests.IntSource.IntSource">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.IntSource.</span></span><span class="sig-name descname"><span class="pre">IntSource</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">config</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/IntSource.html#IntSource"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.IntSource.IntSource" title="Permalink to this definition"></a></dt>
+<dd><p>Bases: <a class="reference internal" href="decisionengine.framework.modules.html#decisionengine.framework.modules.Source.Source" title="decisionengine.framework.modules.Source.Source"><code class="xref py py-class docutils literal notranslate"><span class="pre">decisionengine.framework.modules.Source.Source</span></code></a></p>
+<dl class="py attribute">
+<dt class="sig sig-object py" id="decisionengine.framework.tests.IntSource.IntSource._produces">
+<span class="sig-name descname"><span class="pre">_produces</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'int_value':</span> <span class="pre">&lt;class</span> <span class="pre">'int'&gt;}</span></em><a class="headerlink" href="#decisionengine.framework.tests.IntSource.IntSource._produces" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py attribute">
+<dt class="sig sig-object py" id="decisionengine.framework.tests.IntSource.IntSource._supported_config">
+<span class="sig-name descname"><span class="pre">_supported_config</span></span><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">{'int_value':</span> <span class="pre">(&lt;class</span> <span class="pre">'int'&gt;,</span> <span class="pre">None,</span> <span class="pre">None)}</span></em><a class="headerlink" href="#decisionengine.framework.tests.IntSource.IntSource._supported_config" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="decisionengine.framework.tests.IntSource.IntSource.acquire">
+<span class="sig-name descname"><span class="pre">acquire</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/IntSource.html#IntSource.acquire"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.IntSource.IntSource.acquire" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
 </dd></dl>
 
 </section>
@@ -537,11 +562,14 @@ number ‘n’ appears in the file.</p></li>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="decisionengine.framework.tests.fixtures.PG_PROG">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.fixtures.</span></span><span class="sig-name descname"><span class="pre">PG_PROG</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">_pytest.fixtures.FixtureRequest</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmpdir_factory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">_pytest.tmpdir.TempdirFactory</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><span class="pre">pytest_postgresql.executor.PostgreSQLExecutor</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#decisionengine.framework.tests.fixtures.PG_PROG" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.fixtures.</span></span><span class="sig-name descname"><span class="pre">PG_PROG</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">request</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">_pytest.fixtures.FixtureRequest</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">tmp_path_factory</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">_pytest.tmpdir.TempPathFactory</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">Iterator</span><span class="p"><span class="pre">[</span></span><span class="pre">pytest_postgresql.executor.PostgreSQLExecutor</span><span class="p"><span class="pre">]</span></span></span></span><a class="headerlink" href="#decisionengine.framework.tests.fixtures.PG_PROG" title="Permalink to this definition"></a></dt>
 <dd><p>Process fixture for PostgreSQL.</p>
 <dl class="field-list simple">
 <dt class="field-odd">Parameters</dt>
-<dd class="field-odd"><p><strong>request</strong> – fixture request object</p>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>request</strong> – fixture request object</p></li>
+<li><p><strong>tmp_path_factory</strong> – temporary path object (fixture)</p></li>
+</ul>
 </dd>
 <dt class="field-even">Returns</dt>
 <dd class="field-even"><p>tcp executor</p>
@@ -585,73 +613,32 @@ The SQLAlchemyDS will create the schema as needed.</p>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_client_server.test_client_print_product_columns">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_client_server.</span></span><span class="sig-name descname"><span class="pre">test_client_print_product_columns</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_client_server.html#test_client_print_product_columns"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_client_server.test_client_print_product_columns" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_client_server.test_client_print_product_columns_query">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_client_server.</span></span><span class="sig-name descname"><span class="pre">test_client_print_product_columns_query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_client_server.html#test_client_print_product_columns_query"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_client_server.test_client_print_product_columns_query" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_client_server.test_client_print_product_json">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_client_server.</span></span><span class="sig-name descname"><span class="pre">test_client_print_product_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_client_server.html#test_client_print_product_json"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_client_server.test_client_print_product_json" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_client_server.test_client_print_product_not_real">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_client_server.</span></span><span class="sig-name descname"><span class="pre">test_client_print_product_not_real</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_client_server.html#test_client_print_product_not_real"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_client_server.test_client_print_product_not_real" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_client_server.test_client_print_product_not_string">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_client_server.</span></span><span class="sig-name descname"><span class="pre">test_client_print_product_not_string</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_client_server.html#test_client_print_product_not_string"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_client_server.test_client_print_product_not_string" title="Permalink to this definition"></a></dt>
-<dd><p>Make sure the public API is protected against bad values</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_client_server.test_client_print_product_query">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_client_server.</span></span><span class="sig-name descname"><span class="pre">test_client_print_product_query</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_client_server.html#test_client_print_product_query"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_client_server.test_client_print_product_query" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_client_server.test_client_print_product_types">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_client_server.</span></span><span class="sig-name descname"><span class="pre">test_client_print_product_types</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_client_server.html#test_client_print_product_types"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_client_server.test_client_print_product_types" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_client_server.test_client_print_product_vertical">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_client_server.</span></span><span class="sig-name descname"><span class="pre">test_client_print_product_vertical</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_client_server.html#test_client_print_product_vertical"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_client_server.test_client_print_product_vertical" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
 <dt class="sig sig-object py" id="decisionengine.framework.tests.test_client_server.test_client_status_msg_to_stdout">
 <span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_client_server.</span></span><span class="sig-name descname"><span class="pre">test_client_status_msg_to_stdout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_client_server.html#test_client_status_msg_to_stdout"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_client_server.test_client_status_msg_to_stdout" title="Permalink to this definition"></a></dt>
-<dd><p>Make sure the actuall client console call goes to stdout</p>
+<dd><p>Make sure the actual client console call goes to stdout</p>
 </dd></dl>
+
+</section>
+<section id="module-decisionengine.framework.tests.test_combined_channels">
+<span id="decisionengine-framework-tests-test-combined-channels-module"></span><h2>decisionengine.framework.tests.test_combined_channels module<a class="headerlink" href="#module-decisionengine.framework.tests.test_combined_channels" title="Permalink to this headline"></a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="decisionengine.framework.tests.test_combined_channels.test_combined_channels">
+<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_combined_channels.</span></span><span class="sig-name descname"><span class="pre">test_combined_channels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_combined_channels.html#test_combined_channels"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_combined_channels.test_combined_channels" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="decisionengine.framework.tests.test_combined_channels.test_combined_channels_3g">
+<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_combined_channels.</span></span><span class="sig-name descname"><span class="pre">test_combined_channels_3g</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver_combined</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_combined_channels.html#test_combined_channels_3g"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_combined_channels.test_combined_channels_3g" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
 </section>
 <section id="module-decisionengine.framework.tests.test_defaults">
 <span id="decisionengine-framework-tests-test-defaults-module"></span><h2>decisionengine.framework.tests.test_defaults module<a class="headerlink" href="#module-decisionengine.framework.tests.test_defaults" title="Permalink to this headline"></a></h2>
 <p>Fixture based DE Server tests of the sample config</p>
 <dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_defaults.test_client_can_get_de_server_show_channel_logger_level">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_defaults.</span></span><span class="sig-name descname"><span class="pre">test_client_can_get_de_server_show_channel_logger_level</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_defaults.html#test_client_can_get_de_server_show_channel_logger_level"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_defaults.test_client_can_get_de_server_show_channel_logger_level" title="Permalink to this definition"></a></dt>
-<dd><p>Verify unknown channel has NOTSET</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_defaults.test_client_de_config_is_json">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_defaults.</span></span><span class="sig-name descname"><span class="pre">test_client_de_config_is_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_defaults.html#test_client_de_config_is_json"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_defaults.test_client_de_config_is_json" title="Permalink to this definition"></a></dt>
-<dd><p>Verify config can be fetched in json format</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_defaults.test_global_channel_log_level_in_config">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_defaults.</span></span><span class="sig-name descname"><span class="pre">test_global_channel_log_level_in_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_defaults.html#test_global_channel_log_level_in_config"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_defaults.test_global_channel_log_level_in_config" title="Permalink to this definition"></a></dt>
-<dd><p>Verify global_channel_log_level setting exists</p>
-</dd></dl>
+<dt class="sig sig-object py" id="decisionengine.framework.tests.test_defaults.test_defaults">
+<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_defaults.</span></span><span class="sig-name descname"><span class="pre">test_defaults</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_defaults.html#test_defaults"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_defaults.test_defaults" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
 </section>
 <section id="module-decisionengine.framework.tests.test_dynamic_test_modules">
@@ -722,28 +709,8 @@ The SQLAlchemyDS will create the schema as needed.</p>
 <span id="decisionengine-framework-tests-test-query-tool-server-module"></span><h2>decisionengine.framework.tests.test_query_tool_server module<a class="headerlink" href="#module-decisionengine.framework.tests.test_query_tool_server" title="Permalink to this headline"></a></h2>
 <p>Fixture based DE Server for the de-query-tool tests</p>
 <dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_query_tool_server.test_query_tool_csv">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_query_tool_server.</span></span><span class="sig-name descname"><span class="pre">test_query_tool_csv</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_query_tool_server.html#test_query_tool_csv"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_query_tool_server.test_query_tool_csv" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_query_tool_server.test_query_tool_default">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_query_tool_server.</span></span><span class="sig-name descname"><span class="pre">test_query_tool_default</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_query_tool_server.html#test_query_tool_default"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_query_tool_server.test_query_tool_default" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_query_tool_server.test_query_tool_invalid_product">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_query_tool_server.</span></span><span class="sig-name descname"><span class="pre">test_query_tool_invalid_product</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_query_tool_server.html#test_query_tool_invalid_product"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_query_tool_server.test_query_tool_invalid_product" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_query_tool_server.test_query_tool_json">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_query_tool_server.</span></span><span class="sig-name descname"><span class="pre">test_query_tool_json</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_query_tool_server.html#test_query_tool_json"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_query_tool_server.test_query_tool_json" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_query_tool_server.test_query_tool_since">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_query_tool_server.</span></span><span class="sig-name descname"><span class="pre">test_query_tool_since</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_query_tool_server.html#test_query_tool_since"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_query_tool_server.test_query_tool_since" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="decisionengine.framework.tests.test_query_tool_server.test_query_tool">
+<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_query_tool_server.</span></span><span class="sig-name descname"><span class="pre">test_query_tool</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_query_tool_server.html#test_query_tool"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_query_tool_server.test_query_tool" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </section>
@@ -751,22 +718,18 @@ The SQLAlchemyDS will create the schema as needed.</p>
 <span id="decisionengine-framework-tests-test-reaper-module"></span><h2>decisionengine.framework.tests.test_reaper module<a class="headerlink" href="#module-decisionengine.framework.tests.test_reaper" title="Permalink to this headline"></a></h2>
 <p>Fixture based DE Server for the reaper tests</p>
 <dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_reaper.test_client_can_get_de_server_reaper_start_delay">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_reaper.</span></span><span class="sig-name descname"><span class="pre">test_client_can_get_de_server_reaper_start_delay</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_reaper.html#test_client_can_get_de_server_reaper_start_delay"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_reaper.test_client_can_get_de_server_reaper_start_delay" title="Permalink to this definition"></a></dt>
-<dd><p>Verify reaper can start with delay</p>
-</dd></dl>
-
-<dl class="py function">
 <dt class="sig sig-object py" id="decisionengine.framework.tests.test_reaper.test_client_can_get_de_server_reaper_status">
 <span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_reaper.</span></span><span class="sig-name descname"><span class="pre">test_client_can_get_de_server_reaper_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_reaper.html#test_client_can_get_de_server_reaper_status"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_reaper.test_client_can_get_de_server_reaper_status" title="Permalink to this definition"></a></dt>
 <dd><p>Verify reaper status</p>
 </dd></dl>
 
+</section>
+<section id="module-decisionengine.framework.tests.test_same_source_types">
+<span id="decisionengine-framework-tests-test-same-source-types-module"></span><h2>decisionengine.framework.tests.test_same_source_types module<a class="headerlink" href="#module-decisionengine.framework.tests.test_same_source_types" title="Permalink to this headline"></a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_reaper.test_client_can_get_de_server_reaper_stop">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_reaper.</span></span><span class="sig-name descname"><span class="pre">test_client_can_get_de_server_reaper_stop</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_reaper.html#test_client_can_get_de_server_reaper_stop"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_reaper.test_client_can_get_de_server_reaper_stop" title="Permalink to this definition"></a></dt>
-<dd><p>Verify reaper can stop</p>
-</dd></dl>
+<dt class="sig sig-object py" id="decisionengine.framework.tests.test_same_source_types.test_same_source_types_separate_channels">
+<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_same_source_types.</span></span><span class="sig-name descname"><span class="pre">test_same_source_types_separate_channels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_same_source_types.html#test_same_source_types_separate_channels"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_same_source_types.test_same_source_types_separate_channels" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
 
 </section>
 <section id="module-decisionengine.framework.tests.test_sample_config">
@@ -778,185 +741,53 @@ The SQLAlchemyDS will create the schema as needed.</p>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_sample_config.test_client_can_double_set_de_server_channel_log_level">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_sample_config.</span></span><span class="sig-name descname"><span class="pre">test_client_can_double_set_de_server_channel_log_level</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_sample_config.html#test_client_can_double_set_de_server_channel_log_level"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_sample_config.test_client_can_double_set_de_server_channel_log_level" title="Permalink to this definition"></a></dt>
-<dd><p>Verify set log level to current level isn’t an error</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_sample_config.test_client_can_get_de_server_channel_config">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_sample_config.</span></span><span class="sig-name descname"><span class="pre">test_client_can_get_de_server_channel_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_sample_config.html#test_client_can_get_de_server_channel_config"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_sample_config.test_client_can_get_de_server_channel_config" title="Permalink to this definition"></a></dt>
-<dd><p>Verify config has expected items</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_sample_config.test_client_can_get_de_server_channel_log_level">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_sample_config.</span></span><span class="sig-name descname"><span class="pre">test_client_can_get_de_server_channel_log_level</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_sample_config.html#test_client_can_get_de_server_channel_log_level"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_sample_config.test_client_can_get_de_server_channel_log_level" title="Permalink to this definition"></a></dt>
-<dd><p>Verify can fetch log level for a channel</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_sample_config.test_client_can_get_de_server_show_config">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_sample_config.</span></span><span class="sig-name descname"><span class="pre">test_client_can_get_de_server_show_config</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_sample_config.html#test_client_can_get_de_server_show_config"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_sample_config.test_client_can_get_de_server_show_config" title="Permalink to this definition"></a></dt>
-<dd><p>Verify config has expected items</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_sample_config.test_client_can_get_de_server_show_logger_level">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_sample_config.</span></span><span class="sig-name descname"><span class="pre">test_client_can_get_de_server_show_logger_level</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_sample_config.html#test_client_can_get_de_server_show_logger_level"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_sample_config.test_client_can_get_de_server_show_logger_level" title="Permalink to this definition"></a></dt>
-<dd><p>Verify can fetch log level</p>
-</dd></dl>
-
-<dl class="py function">
 <dt class="sig sig-object py" id="decisionengine.framework.tests.test_sample_config.test_client_can_get_de_server_status">
 <span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_sample_config.</span></span><span class="sig-name descname"><span class="pre">test_client_can_get_de_server_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_sample_config.html#test_client_can_get_de_server_status"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_sample_config.test_client_can_get_de_server_status" title="Permalink to this definition"></a></dt>
-<dd><p>Verify channel enters stable state</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_sample_config.test_client_can_get_products">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_sample_config.</span></span><span class="sig-name descname"><span class="pre">test_client_can_get_products</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_sample_config.html#test_client_can_get_products"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_sample_config.test_client_can_get_products" title="Permalink to this definition"></a></dt>
-<dd><p>Verify client can get channel products</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_sample_config.test_client_can_get_products_no_channels">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_sample_config.</span></span><span class="sig-name descname"><span class="pre">test_client_can_get_products_no_channels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_sample_config.html#test_client_can_get_products_no_channels"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_sample_config.test_client_can_get_products_no_channels" title="Permalink to this definition"></a></dt>
-<dd><p>Verify client can get channel products even when none are run</p>
-</dd></dl>
+<dd></dd></dl>
 
 <dl class="py function">
 <dt class="sig sig-object py" id="decisionengine.framework.tests.test_sample_config.test_client_can_kill_one_channel">
 <span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_sample_config.</span></span><span class="sig-name descname"><span class="pre">test_client_can_kill_one_channel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_sample_config.html#test_client_can_kill_one_channel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_sample_config.test_client_can_kill_one_channel" title="Permalink to this definition"></a></dt>
-<dd><p>Verify client can kill a single channel</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_sample_config.test_client_can_kill_one_channel_force">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_sample_config.</span></span><span class="sig-name descname"><span class="pre">test_client_can_kill_one_channel_force</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_sample_config.html#test_client_can_kill_one_channel_force"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_sample_config.test_client_can_kill_one_channel_force" title="Permalink to this definition"></a></dt>
-<dd><p>Verify client can kill a single channel with force</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_sample_config.test_client_can_kill_one_channel_timeout">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_sample_config.</span></span><span class="sig-name descname"><span class="pre">test_client_can_kill_one_channel_timeout</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_sample_config.html#test_client_can_kill_one_channel_timeout"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_sample_config.test_client_can_kill_one_channel_timeout" title="Permalink to this definition"></a></dt>
-<dd><p>Verify client can kill a single channel with timeout</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_sample_config.test_client_can_set_de_server_channel_log_level">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_sample_config.</span></span><span class="sig-name descname"><span class="pre">test_client_can_set_de_server_channel_log_level</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_sample_config.html#test_client_can_set_de_server_channel_log_level"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_sample_config.test_client_can_set_de_server_channel_log_level" title="Permalink to this definition"></a></dt>
-<dd><p>Verify set log level for a channel</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_sample_config.test_client_can_start_all_channel">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_sample_config.</span></span><span class="sig-name descname"><span class="pre">test_client_can_start_all_channel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_sample_config.html#test_client_can_start_all_channel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_sample_config.test_client_can_start_all_channel" title="Permalink to this definition"></a></dt>
-<dd><p>Verify client can start all channel</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_sample_config.test_client_can_start_one_channel">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_sample_config.</span></span><span class="sig-name descname"><span class="pre">test_client_can_start_one_channel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_sample_config.html#test_client_can_start_one_channel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_sample_config.test_client_can_start_one_channel" title="Permalink to this definition"></a></dt>
-<dd><p>Verify client can start a single channel</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_sample_config.test_client_can_stop_channels">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_sample_config.</span></span><span class="sig-name descname"><span class="pre">test_client_can_stop_channels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_sample_config.html#test_client_can_stop_channels"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_sample_config.test_client_can_stop_channels" title="Permalink to this definition"></a></dt>
-<dd><p>Verify client can stop channels</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_sample_config.test_client_can_stop_one_channel">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_sample_config.</span></span><span class="sig-name descname"><span class="pre">test_client_can_stop_one_channel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_sample_config.html#test_client_can_stop_one_channel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_sample_config.test_client_can_stop_one_channel" title="Permalink to this definition"></a></dt>
-<dd><p>Verify client can stop a single channel</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_sample_config.test_client_can_stop_server">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_sample_config.</span></span><span class="sig-name descname"><span class="pre">test_client_can_stop_server</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_sample_config.html#test_client_can_stop_server"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_sample_config.test_client_can_stop_server" title="Permalink to this definition"></a></dt>
-<dd><p>Verify de-client can run –stop</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_sample_config.test_client_cannot_double_start">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_sample_config.</span></span><span class="sig-name descname"><span class="pre">test_client_cannot_double_start</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_sample_config.html#test_client_cannot_double_start"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_sample_config.test_client_cannot_double_start" title="Permalink to this definition"></a></dt>
-<dd><p>Verify client cannot double start channels</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_sample_config.test_client_get_channel_log_fails_cleanly">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_sample_config.</span></span><span class="sig-name descname"><span class="pre">test_client_get_channel_log_fails_cleanly</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_sample_config.html#test_client_get_channel_log_fails_cleanly"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_sample_config.test_client_get_channel_log_fails_cleanly" title="Permalink to this definition"></a></dt>
-<dd><p>Verify graceful fail on bogus channel</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_sample_config.test_client_get_non_real_channel">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_sample_config.</span></span><span class="sig-name descname"><span class="pre">test_client_get_non_real_channel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_sample_config.html#test_client_get_non_real_channel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_sample_config.test_client_get_non_real_channel" title="Permalink to this definition"></a></dt>
-<dd><p>Verify config for missing channel does what it should</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_sample_config.test_client_set_channel_log_fails_cleanly">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_sample_config.</span></span><span class="sig-name descname"><span class="pre">test_client_set_channel_log_fails_cleanly</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_sample_config.html#test_client_set_channel_log_fails_cleanly"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_sample_config.test_client_set_channel_log_fails_cleanly" title="Permalink to this definition"></a></dt>
-<dd><p>Verify graceful fail on bogus channel</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_sample_config.test_client_start_non_real_channel">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_sample_config.</span></span><span class="sig-name descname"><span class="pre">test_client_start_non_real_channel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_sample_config.html#test_client_start_non_real_channel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_sample_config.test_client_start_non_real_channel" title="Permalink to this definition"></a></dt>
-<dd><p>Verify start for missing channel does what it should</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_sample_config.test_client_stop_non_real_channel">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_sample_config.</span></span><span class="sig-name descname"><span class="pre">test_client_stop_non_real_channel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_sample_config.html#test_client_stop_non_real_channel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_sample_config.test_client_stop_non_real_channel" title="Permalink to this definition"></a></dt>
-<dd><p>Verify stop for missing channel does what it should</p>
-</dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_sample_config.test_client_wait_timeout_works">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_sample_config.</span></span><span class="sig-name descname"><span class="pre">test_client_wait_timeout_works</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_sample_config.html#test_client_wait_timeout_works"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_sample_config.test_client_wait_timeout_works" title="Permalink to this definition"></a></dt>
-<dd><p>Verify channel enters steady state and timeout works too</p>
-</dd></dl>
-
-</section>
-<section id="module-decisionengine.framework.tests.test_source_proxy">
-<span id="decisionengine-framework-tests-test-source-proxy-module"></span><h2>decisionengine.framework.tests.test_source_proxy module<a class="headerlink" href="#module-decisionengine.framework.tests.test_source_proxy" title="Permalink to this headline"></a></h2>
-<p>Fixture based tests of the SourceProxy module.</p>
-<dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_source_proxy.test_cannot_inherit_from_source_proxy">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_source_proxy.</span></span><span class="sig-name descname"><span class="pre">test_cannot_inherit_from_source_proxy</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_source_proxy.html#test_cannot_inherit_from_source_proxy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_source_proxy.test_cannot_inherit_from_source_proxy" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_source_proxy.test_combined_channels">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_source_proxy.</span></span><span class="sig-name descname"><span class="pre">test_combined_channels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver_combined</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_source_proxy.html#test_combined_channels"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_source_proxy.test_combined_channels" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="decisionengine.framework.tests.test_sample_config.test_client_can_restart_all_channels">
+<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_sample_config.</span></span><span class="sig-name descname"><span class="pre">test_client_can_restart_all_channels</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_sample_config.html#test_client_can_restart_all_channels"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_sample_config.test_client_can_restart_all_channels" title="Permalink to this definition"></a></dt>
+<dd><p>Verify client can get channel products even when none are run</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="decisionengine.framework.tests.test_sample_config.test_client_can_restart_one_channel">
+<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_sample_config.</span></span><span class="sig-name descname"><span class="pre">test_client_can_restart_one_channel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_sample_config.html#test_client_can_restart_one_channel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_sample_config.test_client_can_restart_one_channel" title="Permalink to this definition"></a></dt>
+<dd><p>Verify client can restart a single channel</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="decisionengine.framework.tests.test_sample_config.test_client_logger_level">
+<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_sample_config.</span></span><span class="sig-name descname"><span class="pre">test_client_logger_level</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_sample_config.html#test_client_logger_level"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_sample_config.test_client_logger_level" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_source_proxy.test_single_source_proxy">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_source_proxy.</span></span><span class="sig-name descname"><span class="pre">test_single_source_proxy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_source_proxy.html#test_single_source_proxy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_source_proxy.test_single_source_proxy" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_source_proxy.test_stop_failing_source_proxy">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_source_proxy.</span></span><span class="sig-name descname"><span class="pre">test_stop_failing_source_proxy</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver_fail</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_source_proxy.html#test_stop_failing_source_proxy"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_source_proxy.test_stop_failing_source_proxy" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="decisionengine.framework.tests.test_sample_config.test_client_non_real_channel">
+<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_sample_config.</span></span><span class="sig-name descname"><span class="pre">test_client_non_real_channel</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_sample_config.html#test_client_non_real_channel"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_sample_config.test_client_non_real_channel" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </section>
-<section id="module-decisionengine.framework.tests.test_source_proxy_3G">
-<span id="decisionengine-framework-tests-test-source-proxy-3g-module"></span><h2>decisionengine.framework.tests.test_source_proxy_3G module<a class="headerlink" href="#module-decisionengine.framework.tests.test_source_proxy_3G" title="Permalink to this headline"></a></h2>
-<p>Fixture based tests of the SourceProxy module (tests three generations of source-proxies).</p>
+<section id="module-decisionengine.framework.tests.test_shared_sources">
+<span id="decisionengine-framework-tests-test-shared-sources-module"></span><h2>decisionengine.framework.tests.test_shared_sources module<a class="headerlink" href="#module-decisionengine.framework.tests.test_shared_sources" title="Permalink to this headline"></a></h2>
 <dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_source_proxy_3G.test_combined_channels_3g">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_source_proxy_3G.</span></span><span class="sig-name descname"><span class="pre">test_combined_channels_3g</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver_combined</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_source_proxy_3G.html#test_combined_channels_3g"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_source_proxy_3G.test_combined_channels_3g" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="decisionengine.framework.tests.test_shared_sources.record_that_matches">
+<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_shared_sources.</span></span><span class="sig-name descname"><span class="pre">record_that_matches</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">substring</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">records</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_shared_sources.html#record_that_matches"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_shared_sources.record_that_matches" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 <dl class="py function">
-<dt class="sig sig-object py" id="decisionengine.framework.tests.test_source_proxy_3G.test_many_source_proxies">
-<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_source_proxy_3G.</span></span><span class="sig-name descname"><span class="pre">test_many_source_proxies</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_source_proxy_3G.html#test_many_source_proxies"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_source_proxy_3G.test_many_source_proxies" title="Permalink to this definition"></a></dt>
+<dt class="sig sig-object py" id="decisionengine.framework.tests.test_shared_sources.test_conflicting_source_configurations">
+<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_shared_sources.</span></span><span class="sig-name descname"><span class="pre">test_conflicting_source_configurations</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver_conflicting</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caplog</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_shared_sources.html#test_conflicting_source_configurations"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_shared_sources.test_conflicting_source_configurations" title="Permalink to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="decisionengine.framework.tests.test_shared_sources.test_shared_source">
+<span class="sig-prename descclassname"><span class="pre">decisionengine.framework.tests.test_shared_sources.</span></span><span class="sig-name descname"><span class="pre">test_shared_source</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">deserver_shared</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">caplog</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/tests/test_shared_sources.html#test_shared_source"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.tests.test_shared_sources.test_shared_source" title="Permalink to this definition"></a></dt>
 <dd></dd></dl>
 
 </section>
@@ -1006,7 +837,7 @@ The SQLAlchemyDS will create the schema as needed.</p>
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2021, Fermilab.</p>
+    <p>&#169; Copyright 2022, Fermilab.</p>
   </div>
 
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
