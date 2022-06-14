@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>decisionengine.framework.taskmanager package &mdash; decisionengine 0.3.12.dev670+gaeb6b974 documentation</title>
+  <title>decisionengine.framework.taskmanager package &mdash; decisionengine 0.3.12.dev699+g6f5542cd documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -14,6 +14,7 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
@@ -39,8 +40,7 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../release_notes.html">Release Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../release_notes/release_notes_1.7.html">Release 1.7.1</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../release_notes/release_notes_1.7.html#release-1-7-0">Release 1.7.0</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../release_notes/release_notes_2.0.html">Latest</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../install.html">Installing and running HEPCloud’s Decision Engine</a></li>
@@ -97,12 +97,12 @@
            <div itemprop="articleBody">
              
   <section id="decisionengine-framework-taskmanager-package">
-<h1>decisionengine.framework.taskmanager package<a class="headerlink" href="#decisionengine-framework-taskmanager-package" title="Permalink to this headline"></a></h1>
+<h1>decisionengine.framework.taskmanager package<a class="headerlink" href="#decisionengine-framework-taskmanager-package" title="Permalink to this heading"></a></h1>
 <section id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline"></a></h2>
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
 </section>
 <section id="module-decisionengine.framework.taskmanager.LatestMessages">
-<span id="decisionengine-framework-taskmanager-latestmessages-module"></span><h2>decisionengine.framework.taskmanager.LatestMessages module<a class="headerlink" href="#module-decisionengine.framework.taskmanager.LatestMessages" title="Permalink to this headline"></a></h2>
+<span id="decisionengine-framework-taskmanager-latestmessages-module"></span><h2>decisionengine.framework.taskmanager.LatestMessages module<a class="headerlink" href="#module-decisionengine.framework.taskmanager.LatestMessages" title="Permalink to this heading"></a></h2>
 <p>The LatestMessages class listens for messages from a set of queues and
 retains only the last unconsumed message from each queue.</p>
 <p>The latest messages are consumed by calling the consume() instance
@@ -148,7 +148,7 @@ listen for any messages.</p>
 
 </section>
 <section id="module-decisionengine.framework.taskmanager.ProcessingState">
-<span id="decisionengine-framework-taskmanager-processingstate-module"></span><h2>decisionengine.framework.taskmanager.ProcessingState module<a class="headerlink" href="#module-decisionengine.framework.taskmanager.ProcessingState" title="Permalink to this headline"></a></h2>
+<span id="decisionengine-framework-taskmanager-processingstate-module"></span><h2>decisionengine.framework.taskmanager.ProcessingState module<a class="headerlink" href="#module-decisionengine.framework.taskmanager.ProcessingState" title="Permalink to this heading"></a></h2>
 <p>The ProcessingState class can represent any of the following task-manager states:</p>
 <blockquote>
 <div><p>BOOT
@@ -234,7 +234,7 @@ sync between threads if need be.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="decisionengine.framework.taskmanager.ProcessingState.State">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">decisionengine.framework.taskmanager.ProcessingState.</span></span><span class="sig-name descname"><span class="pre">State</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">value</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/taskmanager/ProcessingState.html#State"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.taskmanager.ProcessingState.State" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">enum.Enum</span></code></p>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Enum</span></code></p>
 <p>An enumeration.</p>
 <dl class="py attribute">
 <dt class="sig sig-object py" id="decisionengine.framework.taskmanager.ProcessingState.State.ACTIVE">
@@ -280,7 +280,7 @@ sync between threads if need be.</p>
 
 </section>
 <section id="module-decisionengine.framework.taskmanager.SourceProductCache">
-<span id="decisionengine-framework-taskmanager-sourceproductcache-module"></span><h2>decisionengine.framework.taskmanager.SourceProductCache module<a class="headerlink" href="#module-decisionengine.framework.taskmanager.SourceProductCache" title="Permalink to this headline"></a></h2>
+<span id="decisionengine-framework-taskmanager-sourceproductcache-module"></span><h2>decisionengine.framework.taskmanager.SourceProductCache module<a class="headerlink" href="#module-decisionengine.framework.taskmanager.SourceProductCache" title="Permalink to this heading"></a></h2>
 <dl class="py class">
 <dt class="sig sig-object py" id="decisionengine.framework.taskmanager.SourceProductCache.SourceProductCache">
 <em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">decisionengine.framework.taskmanager.SourceProductCache.</span></span><span class="sig-name descname"><span class="pre">SourceProductCache</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">expected_products</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">logger</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/taskmanager/SourceProductCache.html#SourceProductCache"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.taskmanager.SourceProductCache.SourceProductCache" title="Permalink to this definition"></a></dt>
@@ -294,11 +294,11 @@ sync between threads if need be.</p>
 
 </section>
 <section id="module-decisionengine.framework.taskmanager.TaskManager">
-<span id="decisionengine-framework-taskmanager-taskmanager-module"></span><h2>decisionengine.framework.taskmanager.TaskManager module<a class="headerlink" href="#module-decisionengine.framework.taskmanager.TaskManager" title="Permalink to this headline"></a></h2>
+<span id="decisionengine-framework-taskmanager-taskmanager-module"></span><h2>decisionengine.framework.taskmanager.TaskManager module<a class="headerlink" href="#module-decisionengine.framework.taskmanager.TaskManager" title="Permalink to this heading"></a></h2>
 <p>Task manager</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="decisionengine.framework.taskmanager.TaskManager.TaskManager">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">decisionengine.framework.taskmanager.TaskManager.</span></span><span class="sig-name descname"><span class="pre">TaskManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">workers</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataspace</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expected_products</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exchange</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">broker_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">queue_info</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/taskmanager/TaskManager.html#TaskManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.taskmanager.TaskManager.TaskManager" title="Permalink to this definition"></a></dt>
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">decisionengine.framework.taskmanager.TaskManager.</span></span><span class="sig-name descname"><span class="pre">TaskManager</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">workers</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dataspace</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">expected_products</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">exchange</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">broker_url</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">routing_keys</span></span></em><span class="sig-paren">)</span><a class="reference internal" href="../_modules/decisionengine/framework/taskmanager/TaskManager.html#TaskManager"><span class="viewcode-link"><span class="pre">[source]</span></span></a><a class="headerlink" href="#decisionengine.framework.taskmanager.TaskManager.TaskManager" title="Permalink to this definition"></a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
 <p>Task manager</p>
 <dl class="py method">
@@ -427,7 +427,7 @@ So far in main process.</p>
 
 </section>
 <section id="module-decisionengine.framework.taskmanager.module_graph">
-<span id="decisionengine-framework-taskmanager-module-graph-module"></span><h2>decisionengine.framework.taskmanager.module_graph module<a class="headerlink" href="#module-decisionengine.framework.taskmanager.module_graph" title="Permalink to this headline"></a></h2>
+<span id="decisionengine-framework-taskmanager-module-graph-module"></span><h2>decisionengine.framework.taskmanager.module_graph module<a class="headerlink" href="#module-decisionengine.framework.taskmanager.module_graph" title="Permalink to this heading"></a></h2>
 <p>Ensure no circularities in produces and consumes.</p>
 <dl class="py class">
 <dt class="sig sig-object py" id="decisionengine.framework.taskmanager.module_graph.Worker">
@@ -487,7 +487,7 @@ execution</p>
 
 </section>
 <section id="module-decisionengine.framework.taskmanager">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-decisionengine.framework.taskmanager" title="Permalink to this headline"></a></h2>
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-decisionengine.framework.taskmanager" title="Permalink to this heading"></a></h2>
 </section>
 </section>
 
