@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>decisionengine.framework.tests.test_defaults &mdash; decisionengine 0.3.12.dev702+g81b1af9e documentation</title>
+  <title>decisionengine.framework.tests.test_defaults &mdash; decisionengine 0.3.12.dev708+gdeeb1352 documentation</title>
       <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
@@ -37,7 +37,8 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../release_notes.html">Release Notes</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../../release_notes/release_notes_2.0.html">Latest</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../release_notes/release_notes_2.0.html">Release 2.0.1</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../release_notes/release_notes_2.0.html#release-2-0-0">Release 2.0.0</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../install.html">Installing and running HEPCloud’s Decision Engine</a></li>
@@ -100,13 +101,13 @@
 
 
 <div class="viewcode-block" id="test_defaults"><a class="viewcode-back" href="../../../../code/decisionengine.framework.tests.html#decisionengine.framework.tests.test_defaults.test_defaults">[docs]</a><span class="k">def</span> <span class="nf">test_defaults</span><span class="p">(</span><span class="n">deserver</span><span class="p">):</span>
-    <span class="c1"># Verify unknown channel has NOTSET</span>
+    <span class="c1"># Verify DE does not attempt to get log level for unknown channel.</span>
     <span class="n">output</span> <span class="o">=</span> <span class="n">deserver</span><span class="o">.</span><span class="n">de_client_run_cli</span><span class="p">(</span><span class="s2">&quot;--get-channel-loglevel=UNITTEST&quot;</span><span class="p">)</span>
-    <span class="k">assert</span> <span class="n">output</span> <span class="o">==</span> <span class="s2">&quot;NOTSET&quot;</span>
+    <span class="k">assert</span> <span class="n">output</span> <span class="o">==</span> <span class="s2">&quot;No channel found with the name UNITTEST.&quot;</span>
 
-    <span class="c1"># Verify unknown source has NOTSET</span>
+    <span class="c1"># Verify DE does not attempt to get log level for unknown source.</span>
     <span class="n">output</span> <span class="o">=</span> <span class="n">deserver</span><span class="o">.</span><span class="n">de_client_run_cli</span><span class="p">(</span><span class="s2">&quot;--get-source-loglevel=UNITTEST&quot;</span><span class="p">)</span>
-    <span class="k">assert</span> <span class="n">output</span> <span class="o">==</span> <span class="s2">&quot;NOTSET&quot;</span>
+    <span class="k">assert</span> <span class="n">output</span> <span class="o">==</span> <span class="s2">&quot;No source found with the name UNITTEST.&quot;</span>
 
     <span class="c1"># Verify global_channel_log_level setting exists</span>
     <span class="n">output</span> <span class="o">=</span> <span class="n">deserver</span><span class="o">.</span><span class="n">de_client_run_cli</span><span class="p">(</span><span class="s2">&quot;--show-de-config&quot;</span><span class="p">)</span>
