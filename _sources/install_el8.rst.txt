@@ -11,6 +11,7 @@ You need to install first PostgreSQL, Redis, and then the Decision engine framew
 The following instructions assume a system installation, performed as ``root``.
 decisionengine will run as the decisionengine user.
 
+
 Install PostgreSQL
 ------------------
 
@@ -84,25 +85,22 @@ Install and start the message broker (Redis) container on your system. You can f
     podman run --name decisionengine-redis -p 127.0.0.1:6379:6379 -d redis:6 --loglevel warning
     # When prompted to select an image, pick "docker.io/library/redis:6".
 
+
 Install Decision Engine and the standard modules
 ------------------------------------------------
 
-1. Prerequisites setup. Make sure that the required packages (python3, gcc, ...) are installed and up to date. ::
-    
-    ### STOPPED HERE ###
-    dnf install -y http://ftp.scientificlinux.org/linux/scientific/7x/repos/x86_64/yum-conf-softwarecollections-2.0-1.el7.noarch.rpm
-    dnf install -y https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
+1. Prerequisites setup. Make sure that the required packages (python39, gcc, ...) are installed and up to date. ::
+
     # gcc, swig and make are needed for dependencies (jsonnet)
-    dnf -y install python3 python3-pip python3-setuptools python3-wheel \
+    dnf install python39 python39-pip python39-setuptools python39-wheel \
         gcc gcc-c++ make \
-        python3-devel swig openssl-devel git rpm-build
-    python3 -m pip install --upgrade --user pip
-    python3 -m pip install --upgrade --user setuptools wheel setuptools-scm[toml]
+        python39-devel swig openssl-devel git rpm-build
+    python3.9 -m pip install --upgrade --user pip
+    python3.9 -m pip install --upgrade --user setuptools wheel setuptools-scm[toml]
 
     # To install the modules you will also need GlideinWMS Frontend, which is in the OSG repository.
     # Assuming the use of OSG 3.6, here is a brief summary of the setup:
-    yum install -y yum-priorities
-    yum install -y https://repo.opensciencegrid.org/osg/3.5/osg-3.5-el7-release-latest.rpm
+    dnf install -y https://repo.opensciencegrid.org/osg/3.6/osg-3.6-el8-release-latest.rpm
     # HTCondor 8.9.x or 9.x, required by GlideinWMS, is in the osg-upcoming repository. It should be enabled to find the dependency
     # GlideinWMS 3.9.x is in osg-contrib. The repository should be enabled to find the dependency
     # In both the following files set: enabled=1
@@ -112,57 +110,38 @@ Install Decision Engine and the standard modules
     priority=99
     vi /etc/yum.repos.d/epel.repo
 
-  The complete version of the GlideinWMS installation instructions is available `here<https://opensciencegrid.org/docs/other/install-gwms-frontend/>`
+  The complete version of the GlideinWMS installation instructions is available `here<https://opensciencegrid.org/docs/other/install-gwms-frontend/>`.
+  For a minimal installation, you can use the following command:
+    
+    dnf install glideinwms-vofrontend-libs glideinwms-vofrontend-glidein glideinwms-userschedd glideinwms-usercollector
 
-2. Setup the decision engine yum repositories ::
+2. Setup the decision engine user and git repositories ::
 
-    wget -O /etc/yum.repos.d/ssi-hepcloud.repo http://ssi-rpm.fnal.gov/hep/ssi-hepcloud.repo
-    wget -O /etc/yum.repos.d/ssi-hepcloud-dev.repo http://ssi-rpm.fnal.gov/hep/ssi-hepcloud-dev.repo
+    useradd decisionengine
+    sudo -u decisionengine git clone https://github.com/HEPCloud/decisionengine.git ~decisionengine/decisionengine
+    sudo -u decisionengine git clone https://github.com/HEPCloud/decisionengine_modules.git ~decisionengine/decisionengine_modules
 
-3. Install the decision engine (add ``--enablerepo=ssi-hepcloud-dev`` for the latest development version) ::
+3. Install the decision engine from the git repositories ::
 
-    yum install decisionengine
-    yum install decisionengine_modules
-    # The modules RPM was renamed. For versions <1.7 use instead
-    yum install decisionengine-standard-library
-
-4. Not all packages are available as RPM. It is necessary to install directly some Python dependencies.
-   To avoid to pollute the system Python we will install them for the ``decisionengine`` user,
-   the user the service is running as.
-   Install the required Python packages (these are taken from setup.py) ::
-
-    su decisionengine -s /bin/bash
-    python3 -m pip install --upgrade pip setuptools wheel --user
-    python3 /path/to/decisionengine/setup.py develop --user
-    python3 /path/to/decisionengine/setup.py develop --user --uninstall
-    python3 /path/to/decisionengine_modules/setup.py develop --user
-    python3 /path/to/decisionengine_modules/setup.py develop --user --uninstall
+    # Install the decisionengine framework and modules using setuptools
+    su - decisionengine
+    pushd decisionengine
+    python3.9 setup.py develop --user
+    popd
+    pushd decisionengine_modules
+    python3.9 setup.py develop --user
+    popd
     exit
 
-   The commands above should be sufficient. Anyway, here is an explicit list you can use in alternative::
+    # Create the required system files and directories (as root)
+    mkdir /etc/decisionengine
+    mkdir /var/log/decisionengine/
+    cp ~decisionengine/decisionengine/config/decision_engine.jsonnet /etc/decisionengine
+    cp -r ~decisionengine/decisionengine/src/decisionengine/framework/tests/etc/decisionengine/config.d /etc/decisionengine
+    chown -R decisionengine:decisionengine /etc/decisionengine
+    chown -R decisionengine:decisionengine /var/log/decisionengine
 
-    su decisionengine -s /bin/bash
-    # from decisionengine setup.py
-    python3 -m pip install --user jsonnet tabulate toposort structlog
-    python3 -m pip install --user wheel DBUtils sqlalchemy
-    python3 -m pip install --user pandas==1.1.5 numpy==1.19.5
-    python3 -m pip install --user "psycopg2-binary >= 2.8.6; platform_python_implementation == 'CPython'"
-    python3 -m pip install --user "psycopg2cffi >= 2.9.0; platform_python_implementation == 'PyPy'"
-    # from decisionengine_modules setup.py
-    python3 -m pip install --user boto3 google_auth google-api-python-client
-    python3 -m pip install --user gcs-oauth2-boto-plugin
-    # Condor should be already there from the RPM, if not add: python3 -m pip install htcondor
-    # bill-calculator-hep is only for versions >= 1.7
-    python3 -m pip install --user bill-calculator-hep
-
-    # The following are additional requirements for v1.6 and earlier
-    python3 -m pip install --user boto packaging
-    # This is not in pypi
-    python3 -m pip install --user https://test-files.pythonhosted.org/packages/f4/a5/17a14b4ef85bc412a0ddb771771de3f562430328b0d83da6091a4131bb26/bill_calculator_hep_mapsacosta-0.0.10-py3-none-any.whl
-
-    exit
-
-Now you can type ``decisionengine --help`` to print the help message.
+Now you can type ``decisionengine --help`` while logged in as decisionengine to print the help message.
 To do more you need first to configure Decision Engine.
 
 
@@ -225,7 +204,8 @@ Start decision engine
 
 Start the service ::
 
-    systemctl start decisionengine
+    # As decisionengine user
+    decisionengine --no-webserver &
 
 
 Add channels to decision engine
@@ -237,19 +217,8 @@ and restarting the decision engine.
 
 Here is a simple test channel configuration.
 This test channel is using some NOP classes currently defined in the unit tests and not distributed.
-First, copy these classes from the Git repository::
 
-    cd YOUR_decisionengine_REPO
-    # OR download the files from GitHub
-    mkdir /tmp/derepo
-    cd /tmp/derepo
-    wget https://github.com/HEPCloud/decisionengine/archive/refs/heads/master.zip
-    unzip master.zip
-    cd decisionengine-master
-    # Now copy the files
-    cp -r src/decisionengine/framework/tests /lib/python3.6/site-packages/decisionengine/framework/
-
-Then, add the channel by placing this in ``/etc/decisionengine/config.d/test_channel.jsonnet``::
+The following configuration has been added as an example to ``/etc/decisionengine/config.d/test_channel.jsonnet`` during the installation process::
 
     {
       sources: {
@@ -290,9 +259,4 @@ Then, add the channel by placing this in ``/etc/decisionengine/config.d/test_cha
       }
     }
 
-Finally, restart decision engine to start the new channel::
-
-    systemctl restart decisionengine
-
-
-``de-client --status`` should show the active test channel
+Once the decisionengine is running, ``de-client --status`` should show the active test channel.
