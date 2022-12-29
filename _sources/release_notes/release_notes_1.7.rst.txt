@@ -1,6 +1,12 @@
 .. SPDX-FileCopyrightText: 2017 Fermi Research Alliance, LLC
 .. SPDX-License-Identifier: Apache-2.0
 
+Release 1.7.4
+-------------
+
+Same as 1.7.1 release. Dome to mantain the same version number as decisionengine_modules.
+
+
 Release 1.7.3
 -------------
 
@@ -18,7 +24,7 @@ Patch level (bug fix) release.
 
 
 Issues fixed in this release
-~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
 Bugs fixed
@@ -31,7 +37,7 @@ Enhancements:
 
 
 Full list of commits since version 1.7.0
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 `606e1e9f <https://github.com/HEPCloud/decisionengine/commit/606e1e9fdd56b17e51fef92da679bfbb90485747>`_:   Merge pull request #585 from vitodb/fix/1.7/vito_port_PR527
 
