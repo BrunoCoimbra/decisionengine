@@ -1,92 +1,47 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  <meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>Installing and running HEPCloud’s Decision Engine &mdash; decisionengine 0.3.12.dev725+g85617b14 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+  <title>Installing and running HEPCloud’s Decision Engine on EL9 &mdash; decisionengine 0.3.12.dev750+gba29da2a documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
-    
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-
-    
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=2faf842c"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Installing and running HEPCloud’s Decision Engine on EL8" href="install_el8.html" />
+    <link rel="next" title="Installing and running HEPCloud’s Decision Engine" href="install_el7.html" />
     <link rel="prev" title="Release 1.1.0" href="release_notes/release_notes_1.1.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
           
-            <a href="index.html" class="icon icon-home"> decisionengine
           
-
-          
+          <a href="index.html" class="icon icon-home">
+            decisionengine
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="release_notes.html">Release Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="release_notes/release_notes_2.0.html">Release 2.0.2</a></li>
@@ -94,19 +49,24 @@
 <li class="toctree-l1"><a class="reference internal" href="release_notes/release_notes_2.0.html#release-2-0-0">Release 2.0.0</a></li>
 </ul>
 <ul class="current">
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Installing and running HEPCloud’s Decision Engine</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installing and running HEPCloud’s Decision Engine on EL9</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#install-postgresql">Install PostgreSQL</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#install-redis">Install Redis</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#install-decision-engine-and-the-standard-modules">Install Decision Engine and the standard modules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-needed-rpms-prerequisites">Install needed RPMs prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#install-via-pip">Install via PIP</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#configure-decision-engine">Configure Decision Engine</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#selecting-your-datasource">Selecting your datasource</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#start-decision-engine">Start decision engine</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#stop-decision-engine">Stop decision engine</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#add-channels-to-decision-engine">Add channels to decision engine</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#setup-pressure-based-pilot-submission">Setup pressure-based pilot submission</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#troubleshooting">Troubleshooting</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="install_el7.html">Installing and running HEPCloud’s Decision Engine</a></li>
 <li class="toctree-l1"><a class="reference internal" href="install_el8.html">Installing and running HEPCloud’s Decision Engine on EL8</a></li>
 </ul>
 <ul>
@@ -118,105 +78,60 @@
 <li class="toctree-l1"><a class="reference internal" href="code/decisionengine.html">decisionengine package</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">decisionengine</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
-        
-      <li>Installing and running HEPCloud’s Decision Engine</li>
-    
-    
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Installing and running HEPCloud’s Decision Engine on EL9</li>
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="_sources/install.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <section id="installing-and-running-hepcloud-s-decision-engine">
-<h1>Installing and running HEPCloud’s Decision Engine<a class="headerlink" href="#installing-and-running-hepcloud-s-decision-engine" title="Permalink to this heading">¶</a></h1>
+             
+  <section id="installing-and-running-hepcloud-s-decision-engine-on-el9">
+<h1>Installing and running HEPCloud’s Decision Engine on EL9<a class="headerlink" href="#installing-and-running-hepcloud-s-decision-engine-on-el9" title="Link to this heading"></a></h1>
+<p>Currently the only version supporting EL9 is the development version, DE 2.0.x, which corresponds to the master branch in Git.</p>
 <p>Decision engine uses a PostgreSQL database back-end and Redis as message broker and cache.</p>
 <p>You need to install first PostgreSQL, Redis, and then the Decision engine framework (decisionengine) and install and add the standard channels (decisionengine_modules).</p>
-<p>The following instructions assume a system installation, performed as <code class="docutils literal notranslate"><span class="pre">root</span></code>.
+<p>The following instructions assume Alma Linux 9. You may need to adapt them slightly for other EL9 flavors.</p>
+<p>These also assume a system installation, performed as <code class="docutils literal notranslate"><span class="pre">root</span></code>.
 decisionengine will run as the decisionengine user.</p>
 <section id="install-postgresql">
-<h2>Install PostgreSQL<a class="headerlink" href="#install-postgresql" title="Permalink to this heading">¶</a></h2>
-<p>The default postgresql installed on RH7 is 9.2 which is outdated. Suggest to remove it and install 12 instead :</p>
+<h2>Install PostgreSQL<a class="headerlink" href="#install-postgresql" title="Link to this heading"></a></h2>
+<p>Install the default postgresql distributed on RHEL9, Postgress 13:</p>
 <ol class="arabic">
-<li><p>Remove old postgresql</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yum</span> <span class="n">erase</span> <span class="o">-</span><span class="n">y</span> <span class="n">postgresql</span><span class="o">*</span>
-</pre></div>
-</div>
-</li>
-<li><p>Install postgresql 12</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yum</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">download</span><span class="o">.</span><span class="n">postgresql</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">pub</span><span class="o">/</span><span class="n">repos</span><span class="o">/</span><span class="n">yum</span><span class="o">/</span><span class="n">reporpms</span><span class="o">/</span><span class="n">EL</span><span class="o">-</span><span class="mi">7</span><span class="o">-</span><span class="n">x86_64</span><span class="o">/</span><span class="n">pgdg</span><span class="o">-</span><span class="n">redhat</span><span class="o">-</span><span class="n">repo</span><span class="o">-</span><span class="n">latest</span><span class="o">.</span><span class="n">noarch</span><span class="o">.</span><span class="n">rpm</span>
-<span class="n">yum</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">postgresql12</span> <span class="n">postgresql12</span><span class="o">-</span><span class="n">server</span>
-<span class="c1"># optional, also: postgresql11-devel</span>
+<li><p>Install postgresql</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dnf</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">postgresql</span> <span class="n">postgresql</span><span class="o">-</span><span class="n">server</span>
+<span class="c1"># optional, also: postgresql-devel</span>
 </pre></div>
 </div>
 </li>
 <li><p>Enable postgresql</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">systemctl</span> <span class="n">enable</span> <span class="n">postgresql</span><span class="o">-</span><span class="mi">12</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">systemctl</span> <span class="n">enable</span> <span class="n">postgresql</span>
 </pre></div>
 </div>
 </li>
 <li><p>Init the database</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">pgsql</span><span class="o">-</span><span class="mi">12</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">postgresql</span><span class="o">-</span><span class="mi">12</span><span class="o">-</span><span class="n">setup</span> <span class="n">initdb</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">postgresql</span><span class="o">-</span><span class="n">setup</span> <span class="o">--</span><span class="n">initdb</span> <span class="o">-</span><span class="n">k</span>
 </pre></div>
 </div>
 </li>
-<li><p>edit <code class="docutils literal notranslate"><span class="pre">/var/lib/pgsql/12/data/pg_hba.conf</span></code> like the following:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">root</span><span class="nd">@fermicloud371</span> <span class="o">~</span><span class="p">]</span><span class="c1"># diff  /var/lib/pgsql/12/data/pg_hba.conf~ /var/lib/pgsql/12/data/pg_hba.conf</span>
+<li><p>edit <code class="docutils literal notranslate"><span class="pre">/var/lib/pgsql/data/pg_hba.conf</span></code> like the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">root</span><span class="nd">@fermicloud371</span> <span class="o">~</span><span class="p">]</span><span class="c1"># diff  /var/lib/pgsql/data/pg_hba.conf~ /var/lib/pgsql/data/pg_hba.conf</span>
 <span class="mi">80</span><span class="n">c80</span>
 <span class="o">&lt;</span> <span class="n">local</span>   <span class="nb">all</span>             <span class="nb">all</span>                                     <span class="n">peer</span>
 <span class="o">---</span>
@@ -234,7 +149,7 @@ decisionengine will run as the decisionengine user.</p>
 <p>This is setting the authentication method to <cite>trust</cite></p>
 </li>
 <li><p>start the database</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">systemctl</span> <span class="n">start</span> <span class="n">postgresql</span><span class="o">-</span><span class="mi">12</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">systemctl</span> <span class="n">start</span> <span class="n">postgresql</span>
 </pre></div>
 </div>
 </li>
@@ -246,59 +161,92 @@ decisionengine will run as the decisionengine user.</p>
 </ol>
 <p>The schema and the connection will be created and configured during the Decision engine framework installation.</p>
 <p>To use the database you have to add it to the environment:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">PG_VERSION</span><span class="o">=</span><span class="mi">12</span>
-<span class="n">export</span> <span class="n">PATH</span><span class="o">=</span><span class="s2">&quot;/usr/pgsql-$</span><span class="si">{PG_VERSION}</span><span class="s2">/bin:~/.local/bin:$PATH&quot;</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">PG_VERSION</span><span class="o">=</span><span class="mi">13</span>
+<span class="n">export</span> <span class="n">PATH</span><span class="o">=</span><span class="s2">&quot;~/.local/bin:$PATH&quot;</span>
+<span class="c1"># you may also add these lines to ~/.bashrc</span>
 </pre></div>
 </div>
 </section>
 <section id="install-redis">
-<h2>Install Redis<a class="headerlink" href="#install-redis" title="Permalink to this heading">¶</a></h2>
-<p>Install and start the message broker (Redis) as explained in
-the <a class="reference internal" href="redis.html"><span class="doc">redis document</span></a></p>
+<h2>Install Redis<a class="headerlink" href="#install-redis" title="Link to this heading"></a></h2>
+<p>Install and start the message broker (Redis) container on your system. You can find more details on the <a class="reference internal" href="redis.html"><span class="doc">redis document</span></a></p>
+<ol class="arabic">
+<li><p>Install Padman</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dnf</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">podman</span>
+</pre></div>
+</div>
+</li>
+<li><p>Run the Redis container</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">podman</span> <span class="n">run</span> <span class="o">--</span><span class="n">name</span> <span class="n">decisionengine</span><span class="o">-</span><span class="n">redis</span> <span class="o">-</span><span class="n">p</span> <span class="mf">127.0.0.1</span><span class="p">:</span><span class="mi">6379</span><span class="p">:</span><span class="mi">6379</span> <span class="o">-</span><span class="n">d</span> <span class="n">redis</span><span class="p">:</span><span class="mi">6</span> <span class="o">--</span><span class="n">loglevel</span> <span class="n">warning</span>
+<span class="c1"># When prompted to select an image, pick &quot;docker.io/library/redis:6&quot;.</span>
+</pre></div>
+</div>
+</li>
+</ol>
 </section>
 <section id="install-decision-engine-and-the-standard-modules">
-<h2>Install Decision Engine and the standard modules<a class="headerlink" href="#install-decision-engine-and-the-standard-modules" title="Permalink to this heading">¶</a></h2>
+<h2>Install Decision Engine and the standard modules<a class="headerlink" href="#install-decision-engine-and-the-standard-modules" title="Link to this heading"></a></h2>
+</section>
+<section id="install-needed-rpms-prerequisites">
+<h2>Install needed RPMs prerequisites<a class="headerlink" href="#install-needed-rpms-prerequisites" title="Link to this heading"></a></h2>
 <ol class="arabic">
-<li><p>Prerequisites setup. Make sure that the required yum repositories and some required packages (python3, gcc, …) are installed and up to date.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yum</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">ftp</span><span class="o">.</span><span class="n">scientificlinux</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">linux</span><span class="o">/</span><span class="n">scientific</span><span class="o">/</span><span class="mi">7</span><span class="n">x</span><span class="o">/</span><span class="n">repos</span><span class="o">/</span><span class="n">x86_64</span><span class="o">/</span><span class="n">yum</span><span class="o">-</span><span class="n">conf</span><span class="o">-</span><span class="n">softwarecollections</span><span class="o">-</span><span class="mf">2.0</span><span class="o">-</span><span class="mf">1.</span><span class="n">el7</span><span class="o">.</span><span class="n">noarch</span><span class="o">.</span><span class="n">rpm</span>
-<span class="n">yum</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">dl</span><span class="o">.</span><span class="n">fedoraproject</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">pub</span><span class="o">/</span><span class="n">epel</span><span class="o">/</span><span class="n">epel</span><span class="o">-</span><span class="n">release</span><span class="o">-</span><span class="n">latest</span><span class="o">-</span><span class="mf">7.</span><span class="n">noarch</span><span class="o">.</span><span class="n">rpm</span>
-<span class="c1"># gcc, swig and make are needed for dependencies (jsonnet)</span>
-<span class="n">yum</span> <span class="o">-</span><span class="n">y</span> <span class="n">install</span> <span class="n">python3</span> <span class="n">python3</span><span class="o">-</span><span class="n">pip</span> <span class="n">python3</span><span class="o">-</span><span class="n">setuptools</span> <span class="n">python3</span><span class="o">-</span><span class="n">wheel</span> \
-    <span class="n">gcc</span> <span class="n">gcc</span><span class="o">-</span><span class="n">c</span><span class="o">++</span> <span class="n">make</span> \
-    <span class="n">python3</span><span class="o">-</span><span class="n">devel</span> <span class="n">swig</span> <span class="n">openssl</span><span class="o">-</span><span class="n">devel</span> <span class="n">git</span> <span class="n">rpm</span><span class="o">-</span><span class="n">build</span>
-<span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="o">--</span><span class="n">user</span> <span class="n">pip</span>
-<span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="o">--</span><span class="n">user</span> <span class="n">setuptools</span> <span class="n">wheel</span> <span class="n">setuptools</span><span class="o">-</span><span class="n">scm</span><span class="p">[</span><span class="n">toml</span><span class="p">]</span>
-
-<span class="c1"># To install the modules you will also need GlideinWMS Frontend, which is in the OSG repository.</span>
-<span class="c1"># Assuming the use of OSG 3.5 that supports both GSI and tokens, here is a brief summary of the setup:</span>
-<span class="n">yum</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">yum</span><span class="o">-</span><span class="n">priorities</span>
-<span class="n">yum</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">repo</span><span class="o">.</span><span class="n">opensciencegrid</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">osg</span><span class="o">/</span><span class="mf">3.5</span><span class="o">/</span><span class="n">osg</span><span class="o">-</span><span class="mf">3.5</span><span class="o">-</span><span class="n">el7</span><span class="o">-</span><span class="n">release</span><span class="o">-</span><span class="n">latest</span><span class="o">.</span><span class="n">rpm</span>
-<span class="c1"># HTCondor 8.9.x or 9.x, required by GlideinWMS, is in the osg-upcoming repository. It should be enabled to find the dependency</span>
-<span class="c1"># GlideinWMS 3.9.x is in osg-contrib. The repository should be enabled to find the dependency</span>
-<span class="c1"># In both the following files set: enabled=1</span>
-<span class="n">vi</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">osg</span><span class="o">-</span><span class="n">upcoming</span><span class="o">.</span><span class="n">repo</span>
-<span class="n">vi</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">osg</span><span class="o">-</span><span class="n">contrib</span><span class="o">.</span><span class="n">repo</span>
-<span class="c1"># Change the Epel repository priority to make sure that comes after the OSG repositories, which are 98. Make sure that epel has:</span>
-<span class="n">priority</span><span class="o">=</span><span class="mi">99</span>
+<li><p>Make sure the correct repositories and priorities are set.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># CRB (&quot;Code Ready Builder&quot; - PowerTools ) is used for swig and other dependencies</span>
+<span class="n">dnf</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">yum</span><span class="o">-</span><span class="n">utils</span>
+<span class="n">dnf</span> <span class="n">config</span><span class="o">-</span><span class="n">manager</span> <span class="o">--</span><span class="nb">set</span><span class="o">-</span><span class="n">enabled</span> <span class="n">crb</span>
+<span class="c1"># EPEL is used for OSG dependencies</span>
+<span class="n">dnf</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">dl</span><span class="o">.</span><span class="n">fedoraproject</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">pub</span><span class="o">/</span><span class="n">epel</span><span class="o">/</span><span class="n">epel</span><span class="o">-</span><span class="n">release</span><span class="o">-</span><span class="n">latest</span><span class="o">-</span><span class="mf">9.</span><span class="n">noarch</span><span class="o">.</span><span class="n">rpm</span>
+<span class="c1"># OSG is used for GlideinWMS, HTCSS and others</span>
+<span class="n">dnf</span> <span class="n">install</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">repo</span><span class="o">.</span><span class="n">opensciencegrid</span><span class="o">.</span><span class="n">org</span><span class="o">/</span><span class="n">osg</span><span class="o">/</span><span class="mf">3.6</span><span class="o">/</span><span class="n">osg</span><span class="o">-</span><span class="mf">3.6</span><span class="o">-</span><span class="n">el9</span><span class="o">-</span><span class="n">release</span><span class="o">-</span><span class="n">latest</span><span class="o">.</span><span class="n">rpm</span>
+<span class="n">dnf</span> <span class="n">repolist</span>
+<span class="c1"># Make sure all the above repos are enabled</span>
+<span class="c1"># And change the Epel repository priority to make sure that comes after the OSG repositories, which are 98 by default.</span>
+<span class="c1"># Make sure that epel has:</span>
+<span class="c1">#  priority=99</span>
 <span class="n">vi</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">epel</span><span class="o">.</span><span class="n">repo</span>
 </pre></div>
 </div>
-<p>The complete version of the GlideinWMS installation instructions is available <a class="reference external" href="https://opensciencegrid.org/docs/other/install-gwms-frontend">here</a></p>
 </li>
-<li><p>Setup the decision engine yum repositories</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">wget</span> <span class="o">-</span><span class="n">O</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">ssi</span><span class="o">-</span><span class="n">hepcloud</span><span class="o">.</span><span class="n">repo</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">ssi</span><span class="o">-</span><span class="n">rpm</span><span class="o">.</span><span class="n">fnal</span><span class="o">.</span><span class="n">gov</span><span class="o">/</span><span class="n">hep</span><span class="o">/</span><span class="n">ssi</span><span class="o">-</span><span class="n">hepcloud</span><span class="o">.</span><span class="n">repo</span>
+<li><p>Install the following prerequisites. Make sure that the required packages are installed and up to date.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># RPMs</span>
+<span class="c1"># gcc, swig and make are needed for dependencies (jsonnet)</span>
+<span class="n">dnf</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">python3</span> <span class="n">python3</span><span class="o">-</span><span class="n">devel</span> <span class="n">python3</span><span class="o">-</span><span class="n">cryptography</span> <span class="n">python3</span><span class="o">-</span><span class="n">pip</span>
+<span class="n">dnf</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">gettext</span> <span class="n">git</span> <span class="n">make</span> <span class="n">openssl</span><span class="o">-</span><span class="n">devel</span> <span class="n">gcc</span> <span class="n">gcc</span><span class="o">-</span><span class="n">c</span><span class="o">++</span> <span class="n">swig</span>
+<span class="c1"># Install also these for RPM building:</span>
+<span class="n">dnf</span> <span class="n">install</span> <span class="o">-</span><span class="n">y</span> <span class="n">python3</span><span class="o">-</span><span class="n">setuptools</span> <span class="n">python3</span><span class="o">-</span><span class="n">wheel</span> <span class="n">rpm</span><span class="o">-</span><span class="n">build</span>
+<span class="c1"># Update Python pip</span>
+<span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="o">--</span><span class="n">user</span> <span class="n">pip</span>
+<span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="o">--</span><span class="n">user</span> <span class="n">setuptools</span> <span class="n">wheel</span> <span class="n">setuptools</span><span class="o">-</span><span class="n">scm</span><span class="p">[</span><span class="n">toml</span><span class="p">]</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<blockquote>
+<div><p>You can install using the provided RPMs (recommended for production) or via PIP install (recommended for development whnen you want to clone the Git repository and change the code).
+This section is for the RPM installation, the next one for the PIP installation. Use one or the other.</p>
+<ol class="arabic simple">
+<li><p>The yum repositories are available only within Fermilab. From the outside you will have to download the RPMs from <cite>GitHub&lt;https://github.com/HEPCloud/decisionengine/releases&gt;</cite> or use the PIP installarion (below).</p></li>
+</ol>
+<blockquote>
+<div><p>Setup the decision engine yum repositories</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># You need the development version wget -O /etc/yum.repos.d/ssi-hepcloud.repo http://ssi-rpm.fnal.gov/hep/ssi-hepcloud.repo</span>
 <span class="n">wget</span> <span class="o">-</span><span class="n">O</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">yum</span><span class="o">.</span><span class="n">repos</span><span class="o">.</span><span class="n">d</span><span class="o">/</span><span class="n">ssi</span><span class="o">-</span><span class="n">hepcloud</span><span class="o">-</span><span class="n">dev</span><span class="o">.</span><span class="n">repo</span> <span class="n">http</span><span class="p">:</span><span class="o">//</span><span class="n">ssi</span><span class="o">-</span><span class="n">rpm</span><span class="o">.</span><span class="n">fnal</span><span class="o">.</span><span class="n">gov</span><span class="o">/</span><span class="n">hep</span><span class="o">/</span><span class="n">ssi</span><span class="o">-</span><span class="n">hepcloud</span><span class="o">-</span><span class="n">dev</span><span class="o">.</span><span class="n">repo</span>
+<span class="c1"># This is the same as the EL9 development repo: http://ssi-rpm.fnal.gov/hep/hepcloud-el9/ssi-hepcloud-dev.repo (http://ssi-rpm.fnal.gov/hep/hepcloud-el9/development/)</span>
 </pre></div>
 </div>
-</li>
-<li><p>Install the decision engine (add <code class="docutils literal notranslate"><span class="pre">--enablerepo=ssi-hepcloud-dev</span></code> for the latest development version)</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">yum</span> <span class="n">install</span> <span class="n">decisionengine</span>
-<span class="n">yum</span> <span class="n">install</span> <span class="n">decisionengine_modules</span>
-</pre></div>
-</div>
-</li>
-<li><p>Not all packages are available as RPM. It is necessary to install directly some Python dependencies.
-To avoid to pollute the system Python we will install them for the <code class="docutils literal notranslate"><span class="pre">decisionengine</span></code> user,
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>Install the decision engine and add <code class="docutils literal notranslate"><span class="pre">--enablerepo=ssi-hepcloud-dev</span></code> for the latest development version</p></li>
+</ol>
+<blockquote>
+<div><p>dnf install decisionengine
+dnf install decisionengine_modules</p>
+</div></blockquote>
+<ol class="arabic simple" start="3">
+<li><p>Not all packages are available as RPM. It is necessary to install directly some Python dependencies.</p></li>
+</ol>
+<blockquote>
+<div><p>To avoid to pollute the system Python we will install them for the <code class="docutils literal notranslate"><span class="pre">decisionengine</span></code> user,
 the user the service is running as.
 Install the required Python packages (these are taken from setup.py)</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">su</span> <span class="n">decisionengine</span> <span class="o">-</span><span class="n">s</span> <span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span>
@@ -315,10 +263,10 @@ Install the required Python packages (these are taken from setup.py)</p>
 <span class="c1"># from decisionengine setup.py</span>
 <span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span> <span class="n">jsonnet</span><span class="o">==</span><span class="mf">0.17.0</span> <span class="n">tabulate</span> <span class="n">toposort</span> <span class="n">structlog</span>
 <span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span> <span class="n">wheel</span> <span class="n">DBUtils</span> <span class="n">sqlalchemy</span>
-<span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span> <span class="n">pandas</span><span class="o">==</span><span class="mf">1.1.5</span> <span class="n">numpy</span><span class="o">==</span><span class="mf">1.19.5</span>
-<span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span> <span class="s2">&quot;psycopg2-binary &gt;= 2.8.6; platform_python_implementation == &#39;CPython&#39;&quot;</span>
+<span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span> <span class="n">pandas</span><span class="o">==</span><span class="mf">2.0.0</span> <span class="n">numpy</span><span class="o">==</span><span class="mf">1.24.2</span>
+<span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span> <span class="s2">&quot;psycopg2-binary &gt;= 2.9.6; platform_python_implementation == &#39;CPython&#39;&quot;</span>
 <span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span> <span class="s2">&quot;psycopg2cffi &gt;= 2.9.0; platform_python_implementation == &#39;PyPy&#39;&quot;</span>
-<span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span> <span class="s2">&quot;cherrypy&gt;=18.6.0&quot;</span> <span class="s2">&quot;kombu[redis]&gt;=5.2.0rc1&quot;</span> <span class="s2">&quot;prometheus-client&gt;=0.10.0&quot;</span>
+<span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span> <span class="s2">&quot;cherrypy&gt;=18.8.0&quot;</span> <span class="s2">&quot;kombu[redis]&gt;=5.3.0b3&quot;</span> <span class="s2">&quot;prometheus-client&gt;=0.16.0&quot;</span>
 <span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span> <span class="s2">&quot;psutil&gt;=5.8.0&quot;</span> <span class="s2">&quot;typing_extensions==4.1.1&quot;</span>
 <span class="c1"># from decisionengine_modules setup.py</span>
 <span class="n">python3</span> <span class="o">-</span><span class="n">m</span> <span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">user</span> <span class="n">boto3</span> <span class="n">google</span><span class="o">-</span><span class="n">api</span><span class="o">-</span><span class="n">python</span><span class="o">-</span><span class="n">client</span>
@@ -335,21 +283,75 @@ Install the required Python packages (these are taken from setup.py)</p>
 <span class="n">exit</span>
 </pre></div>
 </div>
+</div></blockquote>
+<p>Now you can type <code class="docutils literal notranslate"><span class="pre">decisionengine</span> <span class="pre">--help</span></code> to print the help message.
+To do more you need first to configure Decision Engine.
+Skip the PIP installation and go to the configuration section.</p>
+</div></blockquote>
+</section>
+<section id="install-via-pip">
+<h2>Install via PIP<a class="headerlink" href="#install-via-pip" title="Link to this heading"></a></h2>
+<p>Skip this if you did the RPM installation. This PIP installation is recommended for development whnen you want to clone the Git repository and change the code.
+There are a few extra steps (dependencies installation ansd setups) that are automated in the RPM installation.</p>
+<ol class="arabic simple">
+<li><p>GlideinWMS (3.10.x) and HTCondor (aka HTCSS) are needed for Decision Engine. The <code class="docutils literal notranslate"><span class="pre">glideinwms</span></code> packages will pull all the other dependencies.</p></li>
+</ol>
+<blockquote>
+<div><p>The complete version of the GlideinWMS installation instructions is available <cite>here&lt;https://opensciencegrid.org/docs/other/install-gwms-frontend/&gt;</cite>.
+For a minimal installation, you can use the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dnf</span> <span class="n">install</span> <span class="n">glideinwms</span><span class="o">-</span><span class="n">vofrontend</span><span class="o">-</span><span class="n">libs</span> <span class="n">glideinwms</span><span class="o">-</span><span class="n">vofrontend</span><span class="o">-</span><span class="n">glidein</span> <span class="n">glideinwms</span><span class="o">-</span><span class="n">userschedd</span> <span class="n">glideinwms</span><span class="o">-</span><span class="n">usercollector</span>
+<span class="n">dnf</span> <span class="n">install</span> <span class="n">glideinwms</span><span class="o">-</span><span class="n">vofrontend</span><span class="o">-</span><span class="n">core</span> <span class="n">glideinwms</span><span class="o">-</span><span class="n">vofrontend</span><span class="o">-</span><span class="n">httpd</span>
+</pre></div>
+</div>
+</div></blockquote>
+<ol class="arabic" start="2">
+<li><p>Setup the decision engine user and git repositories</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">useradd</span> <span class="n">decisionengine</span>
+<span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">decisionengine</span> <span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">HEPCloud</span><span class="o">/</span><span class="n">decisionengine</span><span class="o">.</span><span class="n">git</span> <span class="o">~</span><span class="n">decisionengine</span><span class="o">/</span><span class="n">decisionengine</span>
+<span class="n">sudo</span> <span class="o">-</span><span class="n">u</span> <span class="n">decisionengine</span> <span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">HEPCloud</span><span class="o">/</span><span class="n">decisionengine_modules</span><span class="o">.</span><span class="n">git</span> <span class="o">~</span><span class="n">decisionengine</span><span class="o">/</span><span class="n">decisionengine_modules</span>
+</pre></div>
+</div>
+</li>
+<li><p>Install the decision engine from the git repositories</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># Install the decisionengine framework and modules using setuptools</span>
+<span class="n">su</span> <span class="o">-</span> <span class="n">decisionengine</span> <span class="o">-</span><span class="n">s</span> <span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">bash</span>
+<span class="c1"># Now you should be the decisionengine user in its home directory</span>
+<span class="n">pushd</span> <span class="n">decisionengine</span>
+<span class="n">python3</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">develop</span> <span class="o">--</span><span class="n">user</span>
+<span class="n">popd</span>
+<span class="n">pushd</span> <span class="n">decisionengine_modules</span>
+<span class="n">python3</span> <span class="n">setup</span><span class="o">.</span><span class="n">py</span> <span class="n">develop</span> <span class="o">--</span><span class="n">user</span>
+<span class="n">popd</span>
+<span class="n">exit</span>
+
+<span class="c1"># Create the required system files and directories (as root)</span>
+<span class="n">mkdir</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">decisionengine</span>
+<span class="n">mkdir</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">decisionengine</span><span class="o">/</span>
+<span class="n">cp</span> <span class="o">~</span><span class="n">decisionengine</span><span class="o">/</span><span class="n">decisionengine</span><span class="o">/</span><span class="n">config</span><span class="o">/</span><span class="n">decision_engine</span><span class="o">.</span><span class="n">jsonnet</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">decisionengine</span>
+<span class="n">cp</span> <span class="o">-</span><span class="n">r</span> <span class="o">~</span><span class="n">decisionengine</span><span class="o">/</span><span class="n">decisionengine</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">decisionengine</span><span class="o">/</span><span class="n">framework</span><span class="o">/</span><span class="n">tests</span><span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">decisionengine</span><span class="o">/</span><span class="n">config</span><span class="o">.</span><span class="n">d</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">decisionengine</span>
+<span class="n">chown</span> <span class="o">-</span><span class="n">R</span> <span class="n">decisionengine</span><span class="p">:</span><span class="n">decisionengine</span> <span class="o">/</span><span class="n">etc</span><span class="o">/</span><span class="n">decisionengine</span>
+<span class="n">chown</span> <span class="o">-</span><span class="n">R</span> <span class="n">decisionengine</span><span class="p">:</span><span class="n">decisionengine</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">log</span><span class="o">/</span><span class="n">decisionengine</span>
+</pre></div>
+</div>
 </li>
 </ol>
-<p>Now you can type <code class="docutils literal notranslate"><span class="pre">decisionengine</span> <span class="pre">--help</span></code> to print the help message.
+<p>Now you can type <code class="docutils literal notranslate"><span class="pre">decisionengine</span> <span class="pre">--help</span></code> while logged in as decisionengine to print the help message.
 To do more you need first to configure Decision Engine.</p>
+<p>Remember that all the times that you start a new shell as decisionengine you need to add the PIP binary directory to the PATH:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">export</span> <span class="n">PATH</span><span class="o">=</span><span class="s2">&quot;~/.local/bin:$PATH&quot;</span>
+</pre></div>
+</div>
 </section>
 <section id="configure-decision-engine">
-<h2>Configure Decision Engine<a class="headerlink" href="#configure-decision-engine" title="Permalink to this heading">¶</a></h2>
+<h2>Configure Decision Engine<a class="headerlink" href="#configure-decision-engine" title="Link to this heading"></a></h2>
 <p>The default configuration file lives in <code class="docutils literal notranslate"><span class="pre">/etc/decisionengine/decision_engine.jsonnet</span></code>.</p>
 <p>A number of defaults are set for you.</p>
 <section id="selecting-your-datasource">
-<h3>Selecting your datasource<a class="headerlink" href="#selecting-your-datasource" title="Permalink to this heading">¶</a></h3>
+<h3>Selecting your datasource<a class="headerlink" href="#selecting-your-datasource" title="Link to this heading"></a></h3>
 <p>You need a datasource to store in the database the channel’s data (datablocks).
 Each datasource has its own unique schema and cannot be used with a different datasource.</p>
 <p><strong>The SQLAlchemy Data Source</strong></p>
-<p>SQLAlchemy is the default Data Source after v1.7 and is setup with a configuration like:</p>
+<p>SQLAlchemy is the default Data Source and is setup with a configuration like:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;datasource&quot;</span><span class="p">:</span> <span class="p">{</span>
   <span class="s2">&quot;module&quot;</span><span class="p">:</span> <span class="s2">&quot;decisionengine.framework.dataspace.datasources.sqlalchemy_ds&quot;</span><span class="p">,</span>
   <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;SQLAlchemyDS&quot;</span><span class="p">,</span>
@@ -361,57 +363,41 @@ Each datasource has its own unique schema and cannot be used with a different da
 </div>
 <p>Any extra keywords you can pass to the <code class="docutils literal notranslate"><span class="pre">sqlalchemy.engine.Engine</span></code> constructor may be set under <code class="docutils literal notranslate"><span class="pre">config</span></code>.</p>
 <p>SQLAlchemy will create any tablespace objects it requires automatically.</p>
-<p><strong>The PostgreSQL Data Source</strong></p>
-<p>The postgresql Data Source is the only one supported pre v1.7 and is setup with a config like:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;datasource&quot;</span><span class="p">:</span> <span class="p">{</span>
-  <span class="s2">&quot;module&quot;</span><span class="p">:</span> <span class="s2">&quot;decisionengine.framework.dataspace.datasources.postgresql&quot;</span><span class="p">,</span>
- <span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;Postgresql&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;config&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="s2">&quot;user&quot;</span><span class="p">:</span> <span class="s2">&quot;postgres&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;blocking&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
-    <span class="s2">&quot;host&quot;</span><span class="p">:</span> <span class="s2">&quot;localhost&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;port&quot;</span><span class="p">:</span> <span class="mi">5432</span><span class="p">,</span>
-    <span class="s2">&quot;database&quot;</span><span class="p">:</span> <span class="s2">&quot;decisionengine&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;maxconnections&quot;</span><span class="p">:</span> <span class="mi">100</span><span class="p">,</span>
-    <span class="s2">&quot;maxcached&quot;</span><span class="p">:</span> <span class="mi">10</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-</pre></div>
-</div>
-<p>If you use this datasource you must also load the database schema by hand.
-To load the database schema run:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">psql</span> <span class="o">-</span><span class="n">U</span> <span class="n">postgres</span> <span class="n">decisionengine</span> <span class="o">-</span><span class="n">f</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">share</span><span class="o">/</span><span class="n">doc</span><span class="o">/</span><span class="n">decisionengine</span><span class="o">/</span><span class="n">datasources</span><span class="o">/</span><span class="n">postgresql</span><span class="o">.</span><span class="n">sql</span>
-</pre></div>
-</div>
+<p>The PostgreSQL data source, used until v1.7, is no more supported.</p>
 </section>
 </section>
 <section id="start-decision-engine">
-<h2>Start decision engine<a class="headerlink" href="#start-decision-engine" title="Permalink to this heading">¶</a></h2>
+<h2>Start decision engine<a class="headerlink" href="#start-decision-engine" title="Link to this heading"></a></h2>
 <p>Start the service</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">systemctl</span> <span class="n">start</span> <span class="n">decisionengine</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># For the RPM install, as root:</span>
+<span class="n">systemctl</span> <span class="n">start</span> <span class="n">decisionengine</span>
+<span class="c1"># For the PIP install, as decisionengine user (Python packages are installed in ~decisionengine/.local/bin/):</span>
+<span class="n">export</span> <span class="n">PATH</span><span class="o">=</span><span class="s2">&quot;~/.local/bin:$PATH&quot;</span>
+<span class="n">decisionengine</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">webserver</span> <span class="o">&amp;</span>
+</pre></div>
+</div>
+</section>
+<section id="stop-decision-engine">
+<h2>Stop decision engine<a class="headerlink" href="#stop-decision-engine" title="Link to this heading"></a></h2>
+<p>To stop the service and remove the Redis container once you are done run the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># If you are in a RPM installation, as root:</span>
+<span class="n">systemctl</span> <span class="n">stop</span> <span class="n">decisionengine</span>
+<span class="c1"># If you installed via PIP, as decisionengine:</span>
+<span class="n">export</span> <span class="n">PATH</span><span class="o">=</span><span class="s2">&quot;~/.local/bin:$PATH&quot;</span>
+<span class="n">de</span><span class="o">-</span><span class="n">client</span> <span class="o">--</span><span class="n">stop</span>
+<span class="c1"># Run the following as root (root started the container)</span>
+<span class="n">podman</span> <span class="n">stop</span> <span class="n">decisionengine</span><span class="o">-</span><span class="n">redis</span> <span class="o">|</span> <span class="n">xargs</span> <span class="n">podman</span> <span class="n">rm</span>
 </pre></div>
 </div>
 </section>
 <section id="add-channels-to-decision-engine">
-<h2>Add channels to decision engine<a class="headerlink" href="#add-channels-to-decision-engine" title="Permalink to this heading">¶</a></h2>
+<h2>Add channels to decision engine<a class="headerlink" href="#add-channels-to-decision-engine" title="Link to this heading"></a></h2>
 <p>Decision engine decision cycles happen in channels.
 You can add channels by adding configuration files in <code class="docutils literal notranslate"><span class="pre">/etc/decisionengine/config.d/</span></code>
 and restarting the decision engine.</p>
 <p>Here is a simple test channel configuration.
-This test channel is using some NOP classes currently defined in the unit tests and not distributed.
-First, copy these classes from the Git repository:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="n">YOUR_decisionengine_REPO</span>
-<span class="c1"># OR download the files from GitHub</span>
-<span class="n">mkdir</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">derepo</span>
-<span class="n">cd</span> <span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">derepo</span>
-<span class="n">wget</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">HEPCloud</span><span class="o">/</span><span class="n">decisionengine</span><span class="o">/</span><span class="n">archive</span><span class="o">/</span><span class="n">refs</span><span class="o">/</span><span class="n">heads</span><span class="o">/</span><span class="n">master</span><span class="o">.</span><span class="n">zip</span>
-<span class="n">unzip</span> <span class="n">master</span><span class="o">.</span><span class="n">zip</span>
-<span class="n">cd</span> <span class="n">decisionengine</span><span class="o">-</span><span class="n">master</span>
-<span class="c1"># Now copy the files</span>
-<span class="n">cp</span> <span class="o">-</span><span class="n">r</span> <span class="n">src</span><span class="o">/</span><span class="n">decisionengine</span><span class="o">/</span><span class="n">framework</span><span class="o">/</span><span class="n">tests</span> <span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.6</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">decisionengine</span><span class="o">/</span><span class="n">framework</span><span class="o">/</span>
-</pre></div>
-</div>
-<p>Then, add the channel by placing this in <code class="docutils literal notranslate"><span class="pre">/etc/decisionengine/config.d/test_channel.jsonnet</span></code>:</p>
+This test channel is using some NOP classes currently defined in the unit tests and not distributed.</p>
+<p>The following configuration has been added as an example to <code class="docutils literal notranslate"><span class="pre">/etc/decisionengine/config.d/test_channel.jsonnet</span></code> during the installation process:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
   <span class="n">sources</span><span class="p">:</span> <span class="p">{</span>
     <span class="n">source1</span><span class="p">:</span> <span class="p">{</span>
@@ -452,64 +438,100 @@ First, copy these classes from the Git repository:</p>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Finally, restart decision engine to start the new channel:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">systemctl</span> <span class="n">restart</span> <span class="n">decisionengine</span>
+<p>Finally, start or restart decision engine to start the new channel:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># For the RPM install:</span>
+<span class="n">systemctl</span> <span class="n">restart</span> <span class="n">decisionengine</span>
+<span class="c1"># For the PIP install, as decisionengine user</span>
+<span class="n">decisionengine</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">webserver</span> <span class="o">&amp;</span>
 </pre></div>
 </div>
-<p><code class="docutils literal notranslate"><span class="pre">de-client</span> <span class="pre">--status</span></code> should show the active test channel</p>
+<p>Once the decisionengine is running, <code class="docutils literal notranslate"><span class="pre">de-client</span> <span class="pre">--status</span></code> should show the active test channel.</p>
 </section>
 <section id="setup-pressure-based-pilot-submission">
-<h2>Setup pressure-based pilot submission<a class="headerlink" href="#setup-pressure-based-pilot-submission" title="Permalink to this heading">¶</a></h2>
+<h2>Setup pressure-based pilot submission<a class="headerlink" href="#setup-pressure-based-pilot-submission" title="Link to this heading"></a></h2>
 <div class="line-block">
 <div class="line">At this point Decision Engine, GlideinWMS and HTCondor are supposed to be installed and able to run.</div>
 <div class="line">We assume that the Frontend proxy and the VO proxy are already available.</div>
 <div class="line"><br /></div>
-<div class="line">Decision Engine configuration templates referred in this section are available in the <a class="reference external" href="https://github.com/HEPCloud/contrib/tree/master/config_template">contrib repo</a>.</div>
-<div class="line">Files from <code class="docutils literal notranslate"><span class="pre">decisionengine</span></code> folder need to be copied inside <code class="docutils literal notranslate"><span class="pre">/etc/decisionengine</span></code>. Those configuration files have the placeholder field <code class="docutils literal notranslate"><span class="pre">&#64;CHANGEME&#64;</span></code> that needs to be replaced with a proper parameter according to the specific system setup.</div>
 </div>
-<p>Once those configuration file have been updated, we are ready to finalize the Decision Engine configuration.</p>
+<p><strong>- Configure the pressure-based submisison</strong>
+| Write the configuration for the Decision Engine glideinwms module
+| To ease the process you can use the templates available in the <a class="reference external" href="https://github.com/HEPCloud/contrib/tree/master/config_template">config_template contrib repo</a>.
+| Copy the files from the <code class="docutils literal notranslate"><span class="pre">EL9</span></code> folder into <code class="docutils literal notranslate"><span class="pre">/etc/decisionengine</span></code>, and the files in <code class="docutils literal notranslate"><span class="pre">EL9/config.d/</span></code> into <code class="docutils literal notranslate"><span class="pre">/etc/decisionengine/config.d</span></code>.
+| If you made changes to <code class="docutils literal notranslate"><span class="pre">decision_engine.jsonnet</span></code> please merge it with the version form the repository.
+| The important part  from the is the glideinwms import <code class="docutils literal notranslate"><span class="pre">decision_engine.jsonnet</span></code> template is the line: <code class="docutils literal notranslate"><span class="pre">glideinwms:</span> <span class="pre">import</span> <span class="pre">'glideinwms.libsonnet',</span></code>.
+| Those configuration files have a placeholder field <code class="docutils literal notranslate"><span class="pre">&#64;TEMPLATE...&#64;</span></code>
+| that needs to be replaced with the proper parameters according to your specific system setup. The README file has some suggestions.</p>
+<p>Once those configuration files have been updated, we are ready to finalize the Decision Engine configuration.</p>
 <p><strong>- Setup Redis</strong></p>
 <p>Start the message broker (Redis) as pod container:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">podman</span> <span class="n">run</span> <span class="o">--</span><span class="n">name</span> <span class="n">decisionengine</span><span class="o">-</span><span class="n">redis</span> <span class="o">-</span><span class="n">p</span> <span class="mf">127.0.0.1</span><span class="p">:</span><span class="mi">6379</span><span class="p">:</span><span class="mi">6379</span> <span class="o">-</span><span class="n">d</span> <span class="n">redis</span><span class="p">:</span><span class="mi">6</span> <span class="o">--</span><span class="n">loglevel</span> <span class="n">warning</span>
 </pre></div>
 </div>
 <p><strong>- Create GWMS frontend configuration</strong>
-For this step it is needed to run:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">chown</span> <span class="o">-</span><span class="n">R</span> <span class="n">decisionengine</span><span class="p">:</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">gwms</span><span class="o">-</span><span class="n">frontend</span>
+For this step you need first to restart the Decision Engine and then to run a configuration script. To do so, run:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># as root (fix the ownership of the frontend library files)</span>
+<span class="n">chown</span> <span class="o">-</span><span class="n">R</span> <span class="n">decisionengine</span><span class="p">:</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">gwms</span><span class="o">-</span><span class="n">frontend</span>
+<span class="c1"># for RPM installation as root</span>
+<span class="n">systemctl</span> <span class="n">staop</span> <span class="n">decisionengine</span>
 <span class="n">systemctl</span> <span class="n">start</span> <span class="n">decisionengine</span>
-<span class="n">ksu</span> <span class="n">decisionengine</span> <span class="o">-</span><span class="n">e</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">python3</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.6</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">decisionengine_modules</span><span class="o">/</span><span class="n">glideinwms</span><span class="o">/</span><span class="n">configure_gwms_frontend</span><span class="o">.</span><span class="n">py</span>
+<span class="n">ksu</span> <span class="n">decisionengine</span> <span class="o">-</span><span class="n">e</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="nb">bin</span><span class="o">/</span><span class="n">python3</span> <span class="o">/</span><span class="n">usr</span><span class="o">/</span><span class="n">lib</span><span class="o">/</span><span class="n">python3</span><span class="mf">.9</span><span class="o">/</span><span class="n">site</span><span class="o">-</span><span class="n">packages</span><span class="o">/</span><span class="n">decisionengine_modules</span><span class="o">/</span><span class="n">glideinwms</span><span class="o">/</span><span class="n">configure_gwms_frontend</span><span class="o">.</span><span class="n">py</span>
+<span class="c1"># for PIP installation as decisionengine</span>
+<span class="n">de</span><span class="o">-</span><span class="n">client</span> <span class="o">--</span><span class="n">stop</span>
+<span class="n">decisionengine</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">webserver</span> <span class="o">&amp;</span>
+<span class="n">python3</span> <span class="o">~</span><span class="n">decisionengine</span><span class="o">/</span><span class="n">decisionengine_modules</span><span class="o">/</span><span class="n">src</span><span class="o">/</span><span class="n">decisionengine_modules</span><span class="o">/</span><span class="n">glideinwms</span><span class="o">/</span><span class="n">configure_gwms_frontend</span><span class="o">.</span><span class="n">py</span>
 </pre></div>
 </div>
 <p>This command will create the file <code class="docutils literal notranslate"><span class="pre">/var/lib/gwms-frontend/vofrontend/de_frontend_config</span></code></p>
-<p>At this point it is needed to stop decisionengine service and remove the Redis container:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">systemctl</span> <span class="n">stop</span> <span class="n">decisionengine</span>
-<span class="n">podman</span> <span class="n">stop</span> <span class="n">decisionengine</span><span class="o">-</span><span class="n">redis</span> <span class="o">|</span> <span class="n">xargs</span> <span class="n">podman</span> <span class="n">rm</span>
-</pre></div>
-</div>
-<p>Now all should be ready to run Decision Engine.</p>
-<p><strong>- Run Decision Engine</strong></p>
-<p>The procedure to run Decision Engine is as follow:</p>
-<ul>
-<li><p>Reset decisionengine DB:</p>
+<p>To allow a fresh start stop and reset everything:</p>
+<ol class="arabic simple">
+<li><p>stop the decisionengine (service):</p></li>
+</ol>
+<blockquote>
+<div><p># If you are in a RPM installation, as root:
+systemctl stop decisionengine
+# If you installed via PIP, as decisionengine:
+de-client –stop</p>
+</div></blockquote>
+<ol class="arabic simple" start="2">
+<li><p>remove the Redis container:</p></li>
+</ol>
+<blockquote>
+<div><p># Run the following as root (root started the container)
+podman stop decisionengine-redis | xargs podman rm</p>
+</div></blockquote>
+<ol class="arabic" start="3">
+<li><p>and reset the decisionengine DB in PostgreSQL:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">dropdb</span> <span class="o">-</span><span class="n">U</span> <span class="n">postgres</span> <span class="n">decisionengine</span>
 <span class="n">createdb</span> <span class="o">-</span><span class="n">U</span> <span class="n">postgres</span> <span class="n">decisionengine</span>
 </pre></div>
 </div>
 </li>
+</ol>
+<p><strong>- Run Decision Engine</strong>
+Now all should be ready to run Decision Engine with a fresh start.
+Start the Redis container and the decisionengine service.</p>
+<ul>
 <li><p>Run Redis container:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">podman</span> <span class="n">run</span> <span class="o">--</span><span class="n">name</span> <span class="n">decisionengine</span><span class="o">-</span><span class="n">redis</span> <span class="o">-</span><span class="n">p</span> <span class="mf">127.0.0.1</span><span class="p">:</span><span class="mi">6379</span><span class="p">:</span><span class="mi">6379</span> <span class="o">-</span><span class="n">d</span> <span class="n">redis</span><span class="p">:</span><span class="mi">6</span> <span class="o">--</span><span class="n">loglevel</span> <span class="n">warning</span>
 </pre></div>
 </div>
 </li>
 <li><p>Start decisionengine service and check its status:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">systemctl</span> <span class="n">start</span> <span class="n">decisionengine</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># For RPM installations as root:</span>
+<span class="n">systemctl</span> <span class="n">start</span> <span class="n">decisionengine</span>
 <span class="n">sleep</span> <span class="mi">5</span>
 <span class="n">systemctl</span> <span class="n">status</span> <span class="n">decisionengine</span>
+<span class="c1"># For PIP installations as decisionengine:</span>
+<span class="n">decisionengine</span> <span class="o">--</span><span class="n">no</span><span class="o">-</span><span class="n">webserver</span> <span class="o">&amp;</span>
+<span class="n">sleep</span> <span class="mi">5</span>
+<span class="n">de</span><span class="o">-</span><span class="n">client</span> <span class="o">--</span><span class="n">status</span>
 </pre></div>
 </div>
 </li>
 </ul>
-<p><strong>- Submit a test job</strong></p>
+<p><strong>- Submit a test job</strong>
+Finally you can submit a test job to trigger Glidein requests and test the system.</p>
 <ul>
 <li><p>Switch to <code class="docutils literal notranslate"><span class="pre">decisionengine</span></code> user and make sure channel and sources are <code class="docutils literal notranslate"><span class="pre">STEADY</span></code>:</p>
 <p>ksu decisionengine -e /bin/bash
@@ -547,59 +569,51 @@ queue 1
 <p>Now the <code class="docutils literal notranslate"><span class="pre">decisionengine</span></code> user session can be closed to get back to the <code class="docutils literal notranslate"><span class="pre">root</span></code> session.</p>
 <p><strong>- Stop Decision Engine service</strong></p>
 <p>Finally stop Decision Engine service and remove the Redis container:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">systemctl</span> <span class="n">stop</span> <span class="n">decisionengine</span><span class="o">.</span><span class="n">service</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="c1"># If you istalled via RPMs run</span>
+<span class="n">systemctl</span> <span class="n">stop</span> <span class="n">decisionengine</span><span class="o">.</span><span class="n">service</span>
+<span class="c1"># Run de-client --stop as decisionengine if you installed w/ PIP</span>
 <span class="n">podman</span> <span class="n">stop</span> <span class="n">decisionengine</span><span class="o">-</span><span class="n">redis</span> <span class="o">|</span> <span class="n">xargs</span> <span class="n">podman</span> <span class="n">rm</span>
 </pre></div>
 </div>
+</section>
+<section id="troubleshooting">
+<h2>Troubleshooting<a class="headerlink" href="#troubleshooting" title="Link to this heading"></a></h2>
+<p>There is a known podman bug.
+<code class="docutils literal notranslate"><span class="pre">podman</span></code> is leaking volumes each time it starts a container, in the long run this is exhausting system resources.
+To check current volumes used by podman user can run <code class="docutils literal notranslate"><span class="pre">podman</span> <span class="pre">volume</span> <span class="pre">list</span></code>.
+To clean up volumes user can run <code class="docutils literal notranslate"><span class="pre">podman</span> <span class="pre">volume</span> <span class="pre">prune</span> <span class="pre">-f</span></code> after all podman container have been stopped and removed.</p>
 </section>
 </section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="install_el8.html" class="btn btn-neutral float-right" title="Installing and running HEPCloud’s Decision Engine on EL8" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="release_notes/release_notes_1.1.html" class="btn btn-neutral float-left" title="Release 1.1.0" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="install_el7.html" class="btn btn-neutral float-right" title="Installing and running HEPCloud’s Decision Engine" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2022, Fermilab.
-
-    </p>
+    <p>&#169; Copyright 2023, Fermilab.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

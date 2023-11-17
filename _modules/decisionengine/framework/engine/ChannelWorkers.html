@@ -1,89 +1,44 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8" />
-  
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>decisionengine.framework.engine.ChannelWorkers &mdash; decisionengine 0.3.12.dev725+g85617b14 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
-
-  
-  
-
-  
-  
-
-  
-
-  
+  <title>decisionengine.framework.engine.ChannelWorkers &mdash; decisionengine 0.3.12.dev750+gba29da2a documentation</title>
+      <link rel="stylesheet" href="../../../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../../../_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="../../../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../../../" src="../../../../_static/documentation_options.js"></script>
-        <script data-url_root="../../../../" id="documentation_options" src="../../../../_static/documentation_options.js"></script>
-        <script src="../../../../_static/doctools.js"></script>
-        <script src="../../../../_static/sphinx_highlight.js"></script>
-    
-    <script type="text/javascript" src="../../../../_static/js/theme.js"></script>
-
-    
+        <script src="../../../../_static/jquery.js?v=5d32c60e"></script>
+        <script src="../../../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="../../../../_static/documentation_options.js?v=2faf842c"></script>
+        <script src="../../../../_static/doctools.js?v=888ff710"></script>
+        <script src="../../../../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../../../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../../../genindex.html" />
     <link rel="search" title="Search" href="../../../../search.html" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
 
           
-            <a href="../../../../index.html" class="icon icon-home"> decisionengine
           
-
-          
+          <a href="../../../../index.html" class="icon icon-home">
+            decisionengine
           </a>
-
-          
-            
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../../../search.html" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../../../release_notes.html">Release Notes</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../release_notes/release_notes_2.0.html">Release 2.0.2</a></li>
@@ -91,7 +46,8 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../release_notes/release_notes_2.0.html#release-2-0-0">Release 2.0.0</a></li>
 </ul>
 <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../../install.html">Installing and running HEPCloud’s Decision Engine</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../install.html">Installing and running HEPCloud’s Decision Engine on EL9</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../../install_el7.html">Installing and running HEPCloud’s Decision Engine</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../../install_el8.html">Installing and running HEPCloud’s Decision Engine on EL8</a></li>
 </ul>
 <ul>
@@ -103,69 +59,30 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../../code/decisionengine.html">decisionengine package</a></li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../../../index.html">decisionengine</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
-      <li><a href="../../../../index.html" class="icon icon-home"></a> &raquo;</li>
-        
-          <li><a href="../../../index.html">Module code</a> &raquo;</li>
-        
-      <li>decisionengine.framework.engine.ChannelWorkers</li>
-    
-    
+      <li><a href="../../../../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="../../../index.html">Module code</a></li>
+      <li class="breadcrumb-item active">decisionengine.framework.engine.ChannelWorkers</li>
       <li class="wy-breadcrumbs-aside">
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
+             
   <h1>Source code for decisionengine.framework.engine.ChannelWorkers</h1><div class="highlight"><pre>
 <span></span><span class="c1"># SPDX-FileCopyrightText: 2017 Fermi Research Alliance, LLC</span>
 <span class="c1"># SPDX-License-Identifier: Apache-2.0</span>
@@ -184,8 +101,10 @@
 <span class="n">MB</span> <span class="o">=</span> <span class="mi">1000000</span>
 
 
-<div class="viewcode-block" id="ChannelWorker"><a class="viewcode-back" href="../../../../code/decisionengine.framework.engine.html#decisionengine.framework.engine.ChannelWorkers.ChannelWorker">[docs]</a><span class="k">class</span> <span class="nc">ChannelWorker</span><span class="p">(</span><span class="n">multiprocessing</span><span class="o">.</span><span class="n">Process</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="ChannelWorker">
+<a class="viewcode-back" href="../../../../code/decisionengine.framework.engine.html#decisionengine.framework.engine.ChannelWorkers.ChannelWorker">[docs]</a>
+<span class="k">class</span> <span class="nc">ChannelWorker</span><span class="p">(</span><span class="n">multiprocessing</span><span class="o">.</span><span class="n">Process</span><span class="p">):</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Class that encapsulates a channel&#39;s task manager as a separate process.</span>
 
 <span class="sd">    This class&#39; run function is called whenever the process is</span>
@@ -204,19 +123,33 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">task_manager</span> <span class="o">=</span> <span class="n">task_manager</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">logger_config</span> <span class="o">=</span> <span class="n">logger_config</span>
 
-<div class="viewcode-block" id="ChannelWorker.wait_while"><a class="viewcode-back" href="../../../../code/decisionengine.framework.engine.html#decisionengine.framework.engine.ChannelWorkers.ChannelWorker.wait_while">[docs]</a>    <span class="k">def</span> <span class="nf">wait_while</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="ChannelWorker.wait_while">
+<a class="viewcode-back" href="../../../../code/decisionengine.framework.engine.html#decisionengine.framework.engine.ChannelWorkers.ChannelWorker.wait_while">[docs]</a>
+    <span class="k">def</span> <span class="nf">wait_while</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">state</span><span class="p">,</span> <span class="n">timeout</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">task_manager</span><span class="o">.</span><span class="n">state</span><span class="o">.</span><span class="n">wait_while</span><span class="p">(</span><span class="n">state</span><span class="p">,</span> <span class="n">timeout</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="ChannelWorker.get_state_name"><a class="viewcode-back" href="../../../../code/decisionengine.framework.engine.html#decisionengine.framework.engine.ChannelWorkers.ChannelWorker.get_state_name">[docs]</a>    <span class="k">def</span> <span class="nf">get_state_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ChannelWorker.get_state_name">
+<a class="viewcode-back" href="../../../../code/decisionengine.framework.engine.html#decisionengine.framework.engine.ChannelWorkers.ChannelWorker.get_state_name">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_state_name</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">task_manager</span><span class="o">.</span><span class="n">get_state_name</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="ChannelWorker.get_produces"><a class="viewcode-back" href="../../../../code/decisionengine.framework.engine.html#decisionengine.framework.engine.ChannelWorkers.ChannelWorker.get_produces">[docs]</a>    <span class="k">def</span> <span class="nf">get_produces</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ChannelWorker.get_produces">
+<a class="viewcode-back" href="../../../../code/decisionengine.framework.engine.html#decisionengine.framework.engine.ChannelWorkers.ChannelWorker.get_produces">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_produces</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">task_manager</span><span class="o">.</span><span class="n">get_produces</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="ChannelWorker.get_consumes"><a class="viewcode-back" href="../../../../code/decisionengine.framework.engine.html#decisionengine.framework.engine.ChannelWorkers.ChannelWorker.get_consumes">[docs]</a>    <span class="k">def</span> <span class="nf">get_consumes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ChannelWorker.get_consumes">
+<a class="viewcode-back" href="../../../../code/decisionengine.framework.engine.html#decisionengine.framework.engine.ChannelWorkers.ChannelWorker.get_consumes">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_consumes</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">task_manager</span><span class="o">.</span><span class="n">get_consumes</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="ChannelWorker.setup_logger"><a class="viewcode-back" href="../../../../code/decisionengine.framework.engine.html#decisionengine.framework.engine.ChannelWorkers.ChannelWorker.setup_logger">[docs]</a>    <span class="k">def</span> <span class="nf">setup_logger</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ChannelWorker.setup_logger">
+<a class="viewcode-back" href="../../../../code/decisionengine.framework.engine.html#decisionengine.framework.engine.ChannelWorkers.ChannelWorker.setup_logger">[docs]</a>
+    <span class="k">def</span> <span class="nf">setup_logger</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="n">myname</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">task_manager</span><span class="o">.</span><span class="n">name</span>
         <span class="n">myfilename</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">logger_config</span><span class="p">[</span><span class="s2">&quot;log_file&quot;</span><span class="p">]),</span> <span class="n">myname</span> <span class="o">+</span> <span class="s2">&quot;.log&quot;</span><span class="p">)</span>
         <span class="n">start_q_logger</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">logger_config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;start_q_logger&quot;</span><span class="p">,</span> <span class="s2">&quot;True&quot;</span><span class="p">)</span>
@@ -259,14 +192,21 @@
         <span class="n">channel_log_level</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">logger_config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;global_channel_log_level&quot;</span><span class="p">,</span> <span class="s2">&quot;WARNING&quot;</span><span class="p">)</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">task_manager</span><span class="o">.</span><span class="n">set_loglevel_value</span><span class="p">(</span><span class="n">channel_log_level</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="ChannelWorker.run"><a class="viewcode-back" href="../../../../code/decisionengine.framework.engine.html#decisionengine.framework.engine.ChannelWorkers.ChannelWorker.run">[docs]</a>    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ChannelWorker.run">
+<a class="viewcode-back" href="../../../../code/decisionengine.framework.engine.html#decisionengine.framework.engine.ChannelWorkers.ChannelWorker.run">[docs]</a>
+    <span class="k">def</span> <span class="nf">run</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">setup_logger</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Worker for channel </span><span class="si">{</span><span class="bp">self</span><span class="o">.</span><span class="n">task_manager</span><span class="o">.</span><span class="n">name</span><span class="si">}</span><span class="s2"> starting cycles&quot;</span><span class="p">)</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">task_manager</span><span class="o">.</span><span class="n">run_cycles</span><span class="p">()</span></div></div>
+        <span class="bp">self</span><span class="o">.</span><span class="n">task_manager</span><span class="o">.</span><span class="n">run_cycles</span><span class="p">()</span></div>
+</div>
 
 
-<div class="viewcode-block" id="ChannelWorkers"><a class="viewcode-back" href="../../../../code/decisionengine.framework.engine.html#decisionengine.framework.engine.ChannelWorkers.ChannelWorkers">[docs]</a><span class="k">class</span> <span class="nc">ChannelWorkers</span><span class="p">:</span>
-    <span class="sd">&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="ChannelWorkers">
+<a class="viewcode-back" href="../../../../code/decisionengine.framework.engine.html#decisionengine.framework.engine.ChannelWorkers.ChannelWorkers">[docs]</a>
+<span class="k">class</span> <span class="nc">ChannelWorkers</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This class manages and provides access to the task-manager workers.</span>
 
 <span class="sd">    The intention is that the decision engine never directly interacts with the</span>
@@ -291,7 +231,9 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_workers</span> <span class="o">=</span> <span class="p">{}</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span> <span class="o">=</span> <span class="n">threading</span><span class="o">.</span><span class="n">Lock</span><span class="p">()</span>
 
-<div class="viewcode-block" id="ChannelWorkers.Access"><a class="viewcode-back" href="../../../../code/decisionengine.framework.engine.html#decisionengine.framework.engine.ChannelWorkers.ChannelWorkers.Access">[docs]</a>    <span class="k">class</span> <span class="nc">Access</span><span class="p">:</span>
+<div class="viewcode-block" id="ChannelWorkers.Access">
+<a class="viewcode-back" href="../../../../code/decisionengine.framework.engine.html#decisionengine.framework.engine.ChannelWorkers.ChannelWorkers.Access">[docs]</a>
+    <span class="k">class</span> <span class="nc">Access</span><span class="p">:</span>
         <span class="k">def</span> <span class="fm">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">workers</span><span class="p">,</span> <span class="n">lock</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_workers</span> <span class="o">=</span> <span class="n">workers</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span> <span class="o">=</span> <span class="n">lock</span>
@@ -303,57 +245,52 @@
         <span class="k">def</span> <span class="fm">__exit__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">error</span><span class="p">,</span> <span class="nb">type</span><span class="p">,</span> <span class="n">bt</span><span class="p">):</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span><span class="o">.</span><span class="n">release</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="ChannelWorkers.accessed_by_another_thread"><a class="viewcode-back" href="../../../../code/decisionengine.framework.engine.html#decisionengine.framework.engine.ChannelWorkers.ChannelWorkers.accessed_by_another_thread">[docs]</a>    <span class="k">def</span> <span class="nf">accessed_by_another_thread</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ChannelWorkers.accessed_by_another_thread">
+<a class="viewcode-back" href="../../../../code/decisionengine.framework.engine.html#decisionengine.framework.engine.ChannelWorkers.ChannelWorkers.accessed_by_another_thread">[docs]</a>
+    <span class="k">def</span> <span class="nf">accessed_by_another_thread</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span><span class="o">.</span><span class="n">locked</span><span class="p">()</span></div>
 
-<div class="viewcode-block" id="ChannelWorkers.access"><a class="viewcode-back" href="../../../../code/decisionengine.framework.engine.html#decisionengine.framework.engine.ChannelWorkers.ChannelWorkers.access">[docs]</a>    <span class="k">def</span> <span class="nf">access</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+
+<div class="viewcode-block" id="ChannelWorkers.access">
+<a class="viewcode-back" href="../../../../code/decisionengine.framework.engine.html#decisionengine.framework.engine.ChannelWorkers.ChannelWorkers.access">[docs]</a>
+    <span class="k">def</span> <span class="nf">access</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">Access</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_workers</span><span class="p">,</span> <span class="bp">self</span><span class="o">.</span><span class="n">_lock</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="ChannelWorkers.get_unguarded"><a class="viewcode-back" href="../../../../code/decisionengine.framework.engine.html#decisionengine.framework.engine.ChannelWorkers.ChannelWorkers.get_unguarded">[docs]</a>    <span class="k">def</span> <span class="nf">get_unguarded</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_workers</span></div></div>
+
+<div class="viewcode-block" id="ChannelWorkers.get_unguarded">
+<a class="viewcode-back" href="../../../../code/decisionengine.framework.engine.html#decisionengine.framework.engine.ChannelWorkers.ChannelWorkers.get_unguarded">[docs]</a>
+    <span class="k">def</span> <span class="nf">get_unguarded</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_workers</span></div>
+</div>
+
 </pre></div>
 
            </div>
-           
           </div>
           <footer>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2022, Fermilab.
-
-    </p>
+    <p>&#169; Copyright 2023, Fermilab.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
